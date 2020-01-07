@@ -20,5 +20,7 @@ module.exports = {
     ],
     "rules": {
         "semi": 0,
+        "react/prop-types": 0,
+        "comma-dangle": "only-multiline",
     }
 }

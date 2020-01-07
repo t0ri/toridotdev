@@ -1,22 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
+import Index from './Index/Index'
+import Project from './Project/Project'
+
 import './App.css'
 
-function Index() {
-  return <h2>Home</h2>
-}
-
-function Project({ match }) {
-  return (
-    <h2>
-      This is a page for project with ID:
-      {match.params.id}
-    </h2>
-  )
-}
-
-function AppRouter() {
+function SiteRouter() {
   return (
     <Router>
       <div>
@@ -41,4 +31,4 @@ function AppRouter() {
   )
 }
 
-export default AppRouter
+export default SiteRouter
