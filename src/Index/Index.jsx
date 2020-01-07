@@ -2,12 +2,12 @@ import React from 'react'
 
 function Index() {
   return (
-    <div>
-      <h1>I'm Tori, a frontend developer in SF. 👋</h1>
-      <h1>I've been learning computer science and fullstack web development at Make School for two years. 👩🏼‍💻</h1>
+    <section>
+      <h1>I'm Tori, a frontend developer in SF. <span role="img" aria-label="wave">👋</span></h1>
+      <h1>I've been learning computer science and fullstack web development at Make School for two years. <span role="img" aria-label="female technologist">👩🏼‍💻</span></h1>
       <h1>I am user-oriented and love designing experiences.</h1>
-      <h1>&amp; I'm looking for a job. 💻☕</h1>
-    </div>
+      <h1>&amp; I'm looking for a job. <span role="img" aria-label="laptop, coffee cup">💻☕</span></h1>
+    </section>
   )
 }
 

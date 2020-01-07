@@ -18,17 +18,32 @@ export default class Navigation extends Component {
           </li>
 
           <li>
-            <a href="https://www.linkedin.com/in/t0ri/" target="_blank" alt="LinkedIn">
+            <a 
+              href="https://www.linkedin.com/in/t0ri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              alt="LinkedIn"
+            >
               <img src="./img/002-linkedin.png" alt="LinkedIn" />
             </a>
           </li>
           <li>
-            <a href="https://www.github.com/t0ri" target="_blank" alt="GitHub">
+            <a
+              href="https://www.github.com/t0ri"
+              target="_blank"
+              rel="noopener noreferrer"
+              alt="GitHub"
+            >
               <img src="./img/003-github-logo.png" alt="GitHub" />
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com/myomachy" target="_blank" alt="Twitter">
+            <a
+              href="https://www.twitter.com/myomachy"
+              target="_blank"
+              rel="noopener noreferrer"
+              alt="Twitter"
+            >
               <img src="./img/001-twitter.png" alt="Twitter" />
             </a>
           </li>
