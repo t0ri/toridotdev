@@ -13,6 +13,8 @@ import './App.css'
 // Returns component that applies to current route
 // Displays at HTML Root
 function SiteRouter() {
+  // Set Web Page Title
+  document.title = 'Tori Murray'
   return (
     <Router>
       <div>
