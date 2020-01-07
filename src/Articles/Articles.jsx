@@ -49,13 +49,13 @@ export default class Articles extends Component {
         </h1>
         <div>
           {/* Map article JSON to Cards */}
-          {this.getArticles()}
+          {this.showArticles()}
         </div>
       </section>
     )
   }
 
-  getArticles() {
+  showArticles() {
     // Map through articles
     // Pass them to Article Funcion Component to create cards
     return this.articles.map((article, index) => 
