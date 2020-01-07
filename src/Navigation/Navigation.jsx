@@ -17,7 +17,6 @@ export default class Navigation extends Component {
             <Link to="/articles">articles</Link>
           </li>
 
-
           <li>
             <a href="https://www.linkedin.com/in/t0ri/" target="_blank" alt="LinkedIn">
               <img src="./img/002-linkedin.png" alt="LinkedIn" />

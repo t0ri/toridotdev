@@ -11,10 +11,10 @@ function SiteRouter() {
   return (
     <Router>
       <div>
-      <Route path="/" exact component={Index} />
-      <Route path="/projects/:id" component={Project} />
+        <Route path="/" exact component={Index} />
+        <Route path="/projects/:id" component={Project} />
 
-      <Navigation />
+        <Navigation />
       </div>
     </Router>
   )
