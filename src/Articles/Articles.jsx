@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // Get article JSON from file
 import articles from './articles.js'
 
-// Article Function Component
+// Articles Function Component
 // Returns a single card containing an Article
 // Called by Articles.getArticles()
 function Article(props) {
@@ -31,7 +31,7 @@ function Article(props) {
 
 // Articles Class Component
 // Returns Articles Page Section
-// Called by App Route `/articles`
+// Renders when route is `/articles`
 export default class Articles extends Component {
   constructor(props) {
     super(props)
@@ -43,7 +43,10 @@ export default class Articles extends Component {
   render() {
     return (
       <section>
-        <h1>Check out my technical articles on Medium @t0ri <span role="img" aria-label="eyes">👀</span></h1>
+        <h1>
+          Check out my technical articles on Medium
+          <span role="img" aria-label="eyes">👀</span>
+        </h1>
         <div>
           {/* Map article JSON to Cards */}
           {this.getArticles()}

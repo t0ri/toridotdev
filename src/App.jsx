@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Navigation from './Navigation/Navigation'
 import Index from './Index/Index'
-import Project from './Project/Project'
+import Projects from './Projects/Projects'
 import Articles from './Articles/Articles.jsx'
 
 import './App.css'
@@ -20,8 +20,8 @@ function SiteRouter() {
       <div>
         {/* Checks Route, Returns Component */}
         <Route path="/" exact component={Index} />
-        <Route path="/projects" component={Project} />
-        <Route path="/projects/:id" component={Project} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/projects/:id" component={Projects} />
         <Route path="/articles" component={Articles} />
         
         {/* Renders Navigation Component */}
