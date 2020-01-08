@@ -9,31 +9,13 @@ import ProjectCard from './ProjectCard'
 export default class Projects extends Component {
   constructor(props) {
     super(props)
-        
+
     this.state = {
       // Error with API controlled statefully
       error: false,
       // Empty `projects` to hold project data
-      projects: undefined
+      projects: undefined,
     }
-  }
-  
-
-  render() {
-    console.log(this.state.projects)
-    return (
-      <section>
-        <h1>
-          I've worked on some cool projects
-          <span role="img" aria-label="laptop, coffee cup"> 💻 </span>
-        </h1>
-
-        <div>
-          {/* Map Projects as cards */}
-          {this.showProjects()}
-        </div>
-      </section>
-    )
   }
 
   componentDidMount() {
@@ -53,7 +35,7 @@ export default class Projects extends Component {
       const response = await fetch('/api/projects')
       const json = await response.json()
       const list = []
-      await json.projects.map(entry => list.push(entry))
+      await json.projects.map((entry) => list.push(entry))
       this.setState({ projects: list })
     } catch (err) {
       // If fetch errors, set `this.state.error` to `true`
@@ -63,15 +45,16 @@ export default class Projects extends Component {
   }
 
 
+  // eslint-disable-next-line consistent-return
   showProjects() {
     // Destructuring State
     const { error, projects } = this.state
-    
+
     // If fetch resulted in error, return error message
     if (error) {
       return (
         <h1>
-          can't fetch my projects right now
+          can&apos;t fetch my projects right now
           <span role="img" aria-label="sad face"> 😔 </span>
           try again?
         </h1>
@@ -81,12 +64,26 @@ export default class Projects extends Component {
     // If `projects` array exists
     if (projects && projects.length) {
       // Map each index into ProjectCards
-      return projects.map((project, index) =>
-        <ProjectCard project={project} key={project.title + '-' + index} /> 
-      )
-    } else {
-      // Or do nothing & wait for API call/error
-      return
+      // eslint-disable-next-line arrow-body-style
+      return projects.map((project, index) => {
+        return <ProjectCard project={project} key={`${project.title}-${index}`} />
+      })
     }
+  }
+
+  render() {
+    return (
+      <section>
+        <h1>
+          I&apos;ve worked on some cool projects
+          <span role="img" aria-label="laptop, coffee cup"> 💻 </span>
+        </h1>
+
+        <div>
+          {/* Map Projects as cards */}
+          {this.showProjects()}
+        </div>
+      </section>
+    )
   }
 }
