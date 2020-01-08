@@ -6,21 +6,22 @@ module.exports = {
     "extends": "airbnb",
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
     },
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
         },
         "ecmaVersion": 2018,
-        "sourceType": "module"
+        "sourceType": "module",
     },
     "plugins": [
-        "react"
+        "react",
     ],
     "rules": {
         "semi": 0,
+        "comma-dangle": 1,
         "react/prop-types": 0,
-        "comma-dangle": "only-multiline",
-    }
+        "react/no-array-index-key": 0,
+    },
 }
