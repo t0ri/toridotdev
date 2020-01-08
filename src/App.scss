@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+.SiteRouter {
+  font-family: $font-stack;
+  font-size: $font-size;
+  color: $color-dark;
+}
+
+html {
+  background-color: $color-primary;
+}
