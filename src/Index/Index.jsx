@@ -8,7 +8,7 @@ import './index.scss'
 // Renders when route is `/`
 function Index() {
   return (
-    <section id="index">
+    <section id="Index">
       <h1>
         I&apos;m Tori, a frontend developer in SF
         <span role="img" aria-label="wave"> 👋</span>
