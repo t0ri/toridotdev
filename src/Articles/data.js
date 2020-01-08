@@ -1,4 +1,4 @@
-const articles =
+const data =
 [{
   "title": "Statefulness in a Stateless Web",
   "description:": "What are sessions and cookies, and why do we need them?",
@@ -17,4 +17,4 @@ const articles =
   "link": "https://medium.com/@t0ri/taking-a-product-to-the-next-level-with-research-and-planning-270dd53fcfab",
   "img": "https://miro.medium.com/max/2684/1*zlTkohqyIsV6D_SqkkEYag.jpeg"
 }]
-export default articles
+export default data
