@@ -1,0 +1,42 @@
+@import '../variables.scss';
+
+nav {
+  width: 100vw;
+    
+  position: sticky;
+  bottom: 10vh;
+  margin-left: -5vw;
+  
+  background-color: $color-primary;
+  
+  ul {
+    width: 60vw;
+    
+    display: flex;
+    @include flex-flow(row nowrap);
+    @include justify-content(space-between);
+    @include align-items(center);
+    
+    margin-left: 5vw;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      font-size: 3em;
+
+      a {
+        font-family: $font-sans;
+        text-decoration: none;
+        color: $color-foreground;
+        
+        img {
+          height: 60px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
