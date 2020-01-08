@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 // Get article JSON from file
-import articles from './articles.js'
+import data from './data'
 
 // Articles Function Component
-// Returns a single card containing an Article
+// Returns a Card containing an Article
 // Called by Articles.getArticles()
 function Article(props) {
   // Destructuring props
@@ -36,7 +36,7 @@ export default class Articles extends Component {
   constructor(props) {
     super(props)
     // Get articles JSON
-    this.articles = articles
+    this.articles = data
   }
   
   // Render Articles Page
@@ -56,9 +56,11 @@ export default class Articles extends Component {
   }
 
   showArticles() {
+    // Destructuring Props
+    const { articles } = this
     // Map through articles
     // Pass them to Article Funcion Component to create cards
-    return this.articles.map((article, index) => 
+    return articles.map((article, index) => 
       <Article article={article} key={article.title + '-' + index} />
     )
   }
