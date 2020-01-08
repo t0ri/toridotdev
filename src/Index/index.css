@@ -1,2 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Montserrat&display=swap");
+.underline {
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 1;
+  text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white; }
+
 section#Index h1 {
-  font-size: 3em; }
+  font-size: 3em;
+  line-height: 1.4em; }
