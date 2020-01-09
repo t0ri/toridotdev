@@ -14,7 +14,7 @@ class Article extends Component {
     super(props)
 
     this.state = {
-      isFocused: true,
+      isFocused: false,
     }
 
     // Binding `this`
@@ -33,7 +33,7 @@ class Article extends Component {
     // Destructuring state
     const { isFocused } = this.state
 
-    if (isFocused === false) {
+    if (isFocused === true) {
       return 'focus'
     }
   }
@@ -42,7 +42,7 @@ class Article extends Component {
   focusUnderline() {
     const { isFocused } = this.state
 
-    if (isFocused === false) {
+    if (isFocused === true) {
       return 'underline'
     }
   }
