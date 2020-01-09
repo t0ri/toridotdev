@@ -24,14 +24,14 @@ $font-stack: "Inconsolata", monospace, sans-serif;
 $font-sans: "Montserrat";
 
 .underline {
-  border-bottom: 2px solid currentColor;
-  display: inline-block;
-  line-height: 1;
+  border-bottom: 2px solid darken($color-primary, 5%);
+  display: inline;  
+  line-height: inherit;
   text-shadow:
-    2px 2px white,
-    2px -2px white,
-    -2px 2px white,
-    -2px -2px white;
+    inset 0 -0.175em white,
+    inset 0 -0.175em white,
+    inset 0 -0.175em white,
+    inset 0 -0.175em white;
 }
 
 
