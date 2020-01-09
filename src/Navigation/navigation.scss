@@ -10,7 +10,7 @@ nav {
   background-color: $color-primary;
   
   ul {
-    width: 60vw;
+    width: 50vw;
     
     display: flex;
     @include flex-flow(row nowrap);
@@ -22,15 +22,15 @@ nav {
 
     li {
       list-style-type: none;
-      font-size: 3em;
+      font-size: 2.5em;
+      font-family: $font-sans;
 
       a {
-        font-family: $font-sans;
         text-decoration: none;
         color: $color-foreground;
         
         img {
-          height: 60px;
+          height: 40px;
         }
 
       }

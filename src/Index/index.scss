@@ -1,8 +1,12 @@
 @import '../variables.scss';
 
 section#Index {
+  height: 100vh; // positions nav
+
   h1 {
     font-size: 3em;
     line-height: $font-line-height;
+    font-weight: lighter;
+    color: $color-foreground;
   }
 }
