@@ -1,31 +1,84 @@
+/* eslint-disable max-classes-per-file */
 import React, { Component } from 'react'
 
 // Get article JSON from file
 import data from './data'
 
-// Articles Function Component
+import './articles.scss'
+
+// Articles Class Component
 // Returns a Card containing an Article
-// Called by Articles.getArticles()
-function Article(props) {
-  // Destructuring props
-  const { article } = props
-  const { title, description, link, img } = article
+// Rendered by Articles.getArticles()
+class Article extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isFocused: true,
+    }
+
+    // Binding `this`
+    this.handleFocus = this.handleFocus.bind(this)
+  }
+
+  handleFocus() {
+    this.setState((state) => ({
+      isFocused:
+        !state.isFocused
+    }))
+  }
+
+  // eslint-disable-next-line consistent-return
+  focusCard() {
+    // Destructuring state
+    const { isFocused } = this.state
+
+    if (isFocused === false) {
+      return 'focus'
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  focusUnderline() {
+    const { isFocused } = this.state
+
+    if (isFocused === false) {
+      return 'underline'
+    }
+  }
 
   // Return Article Card
-  return (
-    <div>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        alt={title}
+  render() {
+    // Destructuring props
+    const { article } = this.props
+    const {
+      title,
+      description,
+      link,
+      img,
+    } = article
+
+    return (
+      <div
+        className={`card hvr-grow ${this.focusCard()}`}
+        onMouseEnter={this.handleFocus}
+        onMouseLeave={this.handleFocus}
       >
-        <img src={img} alt={title} />
-        <h2>{title}</h2>
-      </a>
-      <h3>{description}</h3>
-    </div>
-  )
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          alt={title}
+        >
+          <div className="top-crop">
+            <img src={img} alt={title} />
+          </div>
+          <h2><span className={this.focusUnderline()}>{title}</span></h2>
+        </a>
+        <p>{description}</p>
+      </div>
+    )
+  }
 }
 
 
@@ -38,30 +91,32 @@ export default class Articles extends Component {
     // Get articles JSON
     this.articles = data
   }
-  
-  // Render Articles Page
-  render() {
-    return (
-      <section>
-        <h1>
-          Check out my technical articles on Medium
-          <span role="img" aria-label="eyes">👀</span>
-        </h1>
-        <div>
-          {/* Map article JSON to Cards */}
-          {this.showArticles()}
-        </div>
-      </section>
-    )
-  }
 
   showArticles() {
     // Destructuring Props
     const { articles } = this
     // Map through articles
     // Pass them to Article Funcion Component to create cards
-    return articles.map((article, index) => 
-      <Article article={article} key={article.title + '-' + index} />
+    return articles.map((article, index) =>
+      // eslint-disable-next-line implicit-arrow-linebreak
+      <Article article={article} key={`${article.title}-${index}`} />
+    // eslint-disable-next-line function-paren-newline
+    )
+  }
+
+  // Render Articles Page
+  render() {
+    return (
+      <section id="Article">
+        <h1>
+          Check out my technical articles on Medium
+          <span role="img" aria-label="eyes"> 👀</span>
+        </h1>
+        <div id="cards">
+          {/* Map article JSON to Cards */}
+          {this.showArticles()}
+        </div>
+      </section>
     )
   }
 }
