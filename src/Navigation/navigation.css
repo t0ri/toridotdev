@@ -11,33 +11,38 @@ nav {
   bottom: 10vh;
   margin-left: -5vw;
   background-color: lavenderblush; }
-  nav ul {
-    width: 50vw;
-    display: flex;
-    -webkit-flex-flow: row nowrap;
-    -moz-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between;
-    -ms-flex-pack: space-between;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-left: 5vw;
-    padding: 0; }
-    nav ul li {
-      list-style-type: none;
-      font-size: 2.5em;
-      font-family: "Montserrat"; }
-      nav ul li span.active {
-        font-weight: bold; }
-      nav ul li a {
-        text-decoration: none;
-        color: #000; }
-        nav ul li a img {
-          height: 40px; }
+
+nav ul {
+  width: 50vw;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 5vw;
+  padding: 0; }
+
+nav ul li {
+  list-style-type: none;
+  font-size: 2.5em;
+  font-family: "Montserrat"; }
+
+nav ul li span.active {
+  font-weight: bold; }
+
+nav ul li a {
+  text-decoration: none;
+  color: #000; }
+
+nav ul li a img {
+  height: 40px; }

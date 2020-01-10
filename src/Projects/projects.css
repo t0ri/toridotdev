@@ -25,7 +25,7 @@ section#Project div#header {
   height: 5vh;
   position: fixed;
   z-index: 99;
-  margin: 0v 0 0 -5vw;
+  margin: 0 0 0 -5vw;
   background-color: lavenderblush; }
 
 section#Project div#header h1 {

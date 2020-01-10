@@ -33,7 +33,7 @@ export default class Projects extends Component {
     try {
       // Fetch from API and push data into `list`
       // Set `this.state.projects` to call render() again
-      const response = await fetch('/api/projects')
+      const response = await fetch('https://cors-anywhere.herokuapp.com/https://portfolio-backend-vrm.herokuapp.com/api/projects')
       const json = await response.json()
       const list = []
       await json.projects.map((entry) => list.push(entry))
