@@ -14,7 +14,7 @@ import './App.scss'
 // Displays at HTML Root
 function SiteRouter() {
   // Set Web Page Title
-  document.title = 'Tori Murray'
+  document.title = '@t0ri\'s website'
   return (
     <Router>
       <div id="SiteRouter">
