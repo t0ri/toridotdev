@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-// import './projectcard.css'
 
 export default class ProjectCard extends React.Component {
   constructor(props) {
@@ -20,33 +19,66 @@ export default class ProjectCard extends React.Component {
     }))
   }
 
-  focusShadow() {
-    if (this.state.isFocused === false) {
-      return "shadow"
+  // eslint-disable-next-line consistent-return
+  isFocused() {
+    const { isFocused } = this.state
+
+    if (isFocused === false) {
+      return 'focus'
+    }
+  }
+
+  // eslint-disable-next-line consistent-return
+  focusUnderline() {
+    const { isFocused } = this.state
+
+    if (isFocused === false) {
+      return 'underline'
     }
   }
 
   render() {
+    const { project } = this.props
     const {
       image,
       title,
       shortdesc: shortDesc,
-      class: madeFor,
       tech,
       live,
       repo
-    } = this.props.project
+    } = project
 
     return (
-      <div className={"project-card-container hvr-grow " + this.focusShadow()} onMouseEnter={this.handleFocus} onMouseLeave={this.handleFocus}>
-        <img src={image} alt={title} className="project-card-image"></img>
-        <Link to={'projects/' + title}><h1 className="project-card-title">{title}</h1></Link>
-        <p className="project-card-desc">{shortDesc}</p>
-        <p className="project-card-class"><span className="bold">Made for</span> {madeFor}</p>
-        <p className="project-card-tech"><span className="bold">Tech:</span> {tech}</p>
-        <div className="project-card-view-links">
-          <a href={live} target="_blank" rel="noopener noreferrer" className="project-card-live-link">View Live</a>
-          <a href={repo} target="_blank" rel="noopener noreferrer" className="project-card-repo-link">View Code</a>
+      <div
+        className={`card hvr-grow ${this.isFocused()}`}
+        onMouseEnter={this.handleFocus}
+        onMouseLeave={this.handleFocus}
+      >
+        <div className="top-crop">
+          <img src={image} alt={title} />
+        </div>
+        <h2>{title}</h2>
+        <p>{shortDesc}</p>
+        <p className="tech">{tech}</p>
+        <div className="view-links">
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            alt={title}
+            className={this.focusUnderline()}
+          >
+            View Live
+          </a>
+          <a
+            href={repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            alt={title}
+            className={this.focusUnderline()}
+          >
+            View Code
+          </a>
         </div>
       </div>
     )

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import ProjectCard from './ProjectCard'
 
+import './projects.scss'
 
 // Projects Class Component
 // Returns Projects Page Content
@@ -73,13 +74,15 @@ export default class Projects extends Component {
 
   render() {
     return (
-      <section>
-        <h1>
-          I&apos;ve worked on some cool projects
-          <span role="img" aria-label="laptop, coffee cup"> 💻 </span>
-        </h1>
+      <section id="Project">
+        <div id="header">
+          <h1>
+            I&apos;ve worked on some cool projects
+            <span role="img" aria-label="laptop, coffee cup"> 💻 </span>
+          </h1>
+        </div>
 
-        <div>
+        <div id="cards">
           {/* Map Projects as cards */}
           {this.showProjects()}
         </div>
