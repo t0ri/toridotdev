@@ -67,7 +67,8 @@ section#Article div#cards div.card h2 {
   font-size: 2em;
   line-height: 1.4em;
   font-weight: lighter;
-  margin-bottom: -.5em; }
+  margin-bottom: -.5em;
+  transition: font-size .25s; }
 
 section#Article div#cards div.card p {
   font-size: 1.75em;
