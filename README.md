@@ -4,13 +4,13 @@
 
 :wave:
 :woman_technologist:
-`tori.dev` is my personal website which you can view [here](https://tori.dev).
+`tori.dev` is my personal website which you can view [here](https://tori.dev). The goal was to create a portfolio that was served using an API for easily updating my projects and articles with clean, well documented code.
 
 This MVP was created in only **4 days**: 1 to design the website, and 3 to code and ship.
 
 Written in React and Sass, and served via my [authenticated Django API](https://t0ri-make-school-coursework.github.io/create-portfolio-backend/#/).
 
-Code quality was enforcned using the ESLint Airbnb style guide!
+Code quality was enforced using the ESLint Airbnb style guide!
 
 <p float="left">
   <img src="https://i.gyazo.com/2ff20a35b6c96890662bf59c55170ca4.png" alt="About Page" width="33%" />
