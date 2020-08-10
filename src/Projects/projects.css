@@ -25,12 +25,12 @@ section#Project div#header {
   height: 5vh;
   position: fixed;
   z-index: 99;
-  margin: 0 0 0 -5vw;
+  margin: -1vh 0 0 -5vw;
   background-color: lavenderblush; }
 
 section#Project div#header h1 {
   font-size: 3em;
-  color: #333;
+  color: #000;
   margin: 0 0 0 5vw; }
 
 section#Project div#cards {

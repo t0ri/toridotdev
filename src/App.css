@@ -10,12 +10,10 @@ html {
   width: 100%;
   overflow: hidden;
   background-color: lavenderblush; }
-
-html body {
-  margin: 10vh 5vw 10vh 5vw; }
-
-html body div#SiteRouter {
-  font-family: "Inconsolata", monospace, sans-serif;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.4em; }
+  html body {
+    margin: 10vh 5vw 10vh 5vw; }
+    html body div#SiteRouter {
+      font-family: "Inconsolata", monospace, sans-serif;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.4em; }

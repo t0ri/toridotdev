@@ -8,78 +8,68 @@
 
 section#Article {
   height: 100vh; }
-
-section#Article h1 {
-  margin-top: 5vh;
-  font-size: 3em; }
-
-section#Article div#cards {
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -moz-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: space-around;
-  margin-top: 8vh; }
-
-section#Article div#cards div.card {
-  display: flex;
-  -webkit-flex-flow: column nowrap;
-  -moz-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: space-between;
-  width: 25vw;
-  min-height: 55vh;
-  overflow: hidden;
-  background-color: #fff;
-  border: 1px solid #aaa;
-  -webkit-box-shadow: 0 0 15px #aaa;
-  -moz-box-shadow: 0 0 15px #aaa;
-  box-shadow: 0 0 15px #aaa; }
-
-section#Article div#cards div.card.focus {
-  -webkit-box-shadow: 0 0 20px #505050;
-  -moz-box-shadow: 0 0 20px #505050;
-  box-shadow: 0 0 20px #505050; }
-
-section#Article div#cards div.card.focus h2 {
-  font-size: 2.25em; }
-
-section#Article div#cards div.card .top-crop {
-  height: 25vh;
-  overflow: hidden; }
-
-section#Article div#cards div.card h2, section#Article div#cards div.card p {
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%; }
-
-section#Article div#cards div.card h2 {
-  font-size: 2em;
-  line-height: 1.4em;
-  font-weight: lighter;
-  margin-bottom: -.5em;
-  transition: font-size .25s; }
-
-section#Article div#cards div.card p {
-  font-size: 1.75em;
-  line-height: 1.4em;
-  color: #747474;
-  margin-bottom: 2.5vh; }
-
-section#Article div#cards div.card a {
-  color: #333;
-  text-decoration: none; }
-
-section#Article div#cards div.card a img {
-  max-width: 100%;
-  height: auto; }
+  section#Article h1 {
+    margin-top: 5vh;
+    font-size: 3em;
+    color: #000; }
+  section#Article div#cards {
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around;
+    margin-top: 8vh; }
+    section#Article div#cards div.card {
+      display: flex;
+      -webkit-flex-flow: column nowrap;
+      -moz-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: space-between;
+      width: 25vw;
+      min-height: 55vh;
+      overflow: hidden;
+      background-color: #fff;
+      border: 1px solid #aaa;
+      -webkit-box-shadow: 0 0 15px #aaa;
+      -moz-box-shadow: 0 0 15px #aaa;
+      box-shadow: 0 0 15px #aaa; }
+      section#Article div#cards div.card.focus {
+        -webkit-box-shadow: 0 0 20px #505050;
+        -moz-box-shadow: 0 0 20px #505050;
+        box-shadow: 0 0 20px #505050; }
+        section#Article div#cards div.card.focus h2 {
+          font-size: 2.25em; }
+      section#Article div#cards div.card .top-crop {
+        height: 25vh;
+        overflow: hidden; }
+      section#Article div#cards div.card h2, section#Article div#cards div.card p {
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%; }
+      section#Article div#cards div.card h2 {
+        font-size: 2em;
+        line-height: 1.4em;
+        font-weight: lighter;
+        margin-bottom: -.5em;
+        transition: font-size .25s; }
+      section#Article div#cards div.card p {
+        font-size: 1.75em;
+        line-height: 1.4em;
+        color: #747474;
+        margin-bottom: 2.5vh; }
+      section#Article div#cards div.card a {
+        color: #333;
+        text-decoration: none; }
+        section#Article div#cards div.card a img {
+          max-width: 100%;
+          height: auto; }
