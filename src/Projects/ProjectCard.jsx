@@ -14,7 +14,7 @@ export default class ProjectCard extends React.Component {
   handleFocus() {
     this.setState((state) => ({
       isFocused:
-        !state.isFocused
+        !state.isFocused,
     }))
   }
 
@@ -39,12 +39,12 @@ export default class ProjectCard extends React.Component {
   render() {
     const { project } = this.props
     const {
-      image,
+      img: image,
       title,
-      shortdesc: shortDesc,
-      tech,
-      live,
-      repo
+      shortDesc,
+      technologies: tech,
+      liveLink: live,
+      repoLink: repo,
     } = project
 
     return (
@@ -60,15 +60,18 @@ export default class ProjectCard extends React.Component {
         <p>{shortDesc}</p>
         <p className="tech">{tech}</p>
         <div className="view-links">
-          <a
-            href={live}
-            target="_blank"
-            rel="noopener noreferrer"
-            alt={title}
-            className={this.focusUnderline()}
-          >
-            View Live
-          </a>
+          {live
+            && (
+            <a
+              href={live}
+              target="_blank"
+              rel="noopener noreferrer"
+              alt={title}
+              className={this.focusUnderline()}
+            >
+              View Live
+            </a>
+            )}
           <a
             href={repo}
             target="_blank"
