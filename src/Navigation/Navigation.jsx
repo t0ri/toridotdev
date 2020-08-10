@@ -14,39 +14,9 @@ import './navigation.scss'
 // Renders Navigation
 // Displayed by SiteRouter()
 class Navigation extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      // isFocused: false,
-    }
-
-    // Binding `this`
-    // this.handleFocus = this.handleFocus.bind(this)
-  }
-
-  // handleFocus(a) {
-  //   this.setState((state) => ({
-  //     isFocused: {
-  //       a: !state.isFocused
-  //     }
-  //   }))
-  // }
-
-  // eslint-disable-next-line consistent-return
-  // isFocused() {
-  //   // Destructuring state
-  //   const { isFocused } = this.state
-
-  //   if (isFocused === true) {
-  //     return 'underline'
-  //   }
-  // }
-
   // eslint-disable-next-line consistent-return
   isActive(linkPath) {
     // Destructuring state & props
-    // const { isActive } = this.state
     const { location } = this.props
     const { pathname: pathName } = location
 
@@ -64,9 +34,6 @@ class Navigation extends Component {
             <Link to="/">
               <span
                 className={this.isActive('/')}
-                // className={`${this.isFocused()} ${this.isActive('/')}`}
-                // onMouseEnter={this.handleFocus('/')}
-                // onMouseLeave={this.handleFocus('/')}
               >
                 about
               </span>
@@ -76,9 +43,6 @@ class Navigation extends Component {
             {/* Projects Link */}
             <span
               className={this.isActive('/projects')}
-              // className={`${this.isFocused('/p')} ${this.isActive('/projects')}`}
-              // onMouseEnter={this.handleFocus('/projects')}
-              // onMouseLeave={this.handleFocus('/projects')}
             >
               <Link to="/projects">projects</Link>
             </span>
@@ -87,9 +51,6 @@ class Navigation extends Component {
             {/* Articles Link */}
             <span
               className={this.isActive('/articles')}
-              // className={`${this.isFocused('/a')} ${this.isActive('/articles')}`}
-              // onMouseEnter={this.handleFocus('/articles')}
-              // onMouseLeave={this.handleFocus('/articles')}
             >
               <Link to="/articles">articles</Link>
             </span>
@@ -120,7 +81,7 @@ class Navigation extends Component {
           <li>
             {/* Twitter Link */}
             <a
-              href="https://www.twitter.com/myomachy"
+              href="https://www.twitter.com/toridotdev"
               target="_blank"
               rel="noopener noreferrer"
               alt="Twitter"
