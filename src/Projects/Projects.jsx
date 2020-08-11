@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import ProjectCard from './ProjectCard'
 
@@ -7,52 +7,14 @@ import './projects.scss'
 // Projects Class Component
 // Returns Projects Page Content
 // Renders when route is `/projects`
-export default class Projects extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      // Error with API controlled statefully
-      error: false,
-      // Empty `projects` to hold project data
-      projects: undefined,
-    }
-  }
-
-  componentDidMount() {
-    // Destructuring Props & State
-    const { projects } = this.state
-    // Get Projects from API if `projects` is emtpy
-    if (!Array.isArray(projects)) {
-      this.getProjects()
-    }
-  }
-
-
-  async getProjects() {
-    try {
-      // Fetch from API and push data into `list`
-      // Set `this.state.projects` to call render() again
-      const response = await fetch('https://cors-anywhere.herokuapp.com/https://portfolio-backend-vrm.herokuapp.com/api/projects')
-      const json = await response.json()
-      const list = []
-      await json.projects.map((entry) => list.push(entry))
-      this.setState({ projects: list })
-    } catch (err) {
-      // If fetch errors, set `this.state.error` to `true`
-      // to display an error message
-      this.setState({ error: true })
-    }
-  }
-
-
+export default function Projects({ projects }) {
   // eslint-disable-next-line consistent-return
-  showProjects() {
+  const showProjects = () => {
     // Destructuring State
-    const { error, projects } = this.state
+    // const { projects } = props
 
-    // If fetch resulted in error, return error message
-    if (error) {
+    // If error, return error message
+    if (!projects) {
       return (
         <h1>
           can&apos;t fetch my projects right now
@@ -72,21 +34,19 @@ export default class Projects extends Component {
     }
   }
 
-  render() {
-    return (
-      <section id="Project">
-        <div id="header">
-          <h1>
-            I&apos;ve worked on some cool projects
-            <span role="img" aria-label="laptop, coffee cup"> 💻 </span>
-          </h1>
-        </div>
+  return (
+    <section id="Project">
+      <div id="header">
+        <h1>
+          I&apos;ve worked on some cool projects
+          <span role="img" aria-label="laptop, coffee cup"> 💻 </span>
+        </h1>
+      </div>
 
-        <div id="cards">
-          {/* Map Projects as cards */}
-          {this.showProjects()}
-        </div>
-      </section>
-    )
-  }
+      <div id="cards">
+        {/* Map Projects as cards */}
+        {showProjects()}
+      </div>
+    </section>
+  )
 }
