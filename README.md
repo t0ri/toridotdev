@@ -28,12 +28,8 @@ These designs were made in InVision Studio on the Monday of my M-Th sprint.
 
 I initially wireframed them on paper through several iterations.
 
-## Known Bugs
-*(version 3 shipping August 2020)*
-- ~Heroku's mLab MongoDB add-on no longer available, projects fail to fetch~
-
 ## Future Plans
-*(version 3 shipping August 2020)*
+*(version 3 planned to ship August 2020!)*
 - ~Responsive design~ 
 - More interactions
 - Add relevant content
