@@ -35,7 +35,7 @@ export default class Articles extends Component {
     return (
       <section id="Article">
         <h1>
-          Check out my technical articles on Medium
+          View my technical articles on Medium
           <span role="img" aria-label="eyes"> 👀</span>
         </h1>
         <div id="cards">
