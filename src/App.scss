@@ -7,26 +7,21 @@ div {
   padding: 0;
 }
 
+html {
+  background-color: $color-dark-purple;
+}
+
 .App {
-  width: 100vw;
-
-  @include flexbox();
-  @include flex-flow(row nowrap);
-  @include justify-content(flex-start);
-  @include align-items(flex-start);
-
   font-size: $font-size;
   line-height: $font-line-height;
   font-family: $font-stack;
 
-  background-color: yellow;
-
   .content-container {
-    width: 70vw;
-
     section {
-      background-color: red;
-      height: 40vh;
+      padding-left: 15vw;
+      padding-top: 7.25vh;
+
+      width: 100vw;
     }
   }
 }
