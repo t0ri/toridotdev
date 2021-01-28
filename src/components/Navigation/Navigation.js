@@ -4,7 +4,7 @@ export default function Navigation() {
   return (
     <div className="Navigation">
       <ul>
-        <li><a href="#">
+        <li><a href="#Welcome">
           <p>tori.dev/</p>
         </a></li>
         <li><a href="#Projects">

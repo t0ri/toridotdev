@@ -5,10 +5,21 @@ section.Welcome {
     width: 70vw;
 
     .flex-container {
+      height: 480px;
+
       @include flexbox();
       @include flex-flow(row nowrap);
       @include justify-content(space-between);
       @include align-items(flex-start);
+      
+      div.left-content {
+        width: 525px;
+        height: 450px;
+        @include flexbox();
+        @include flex-flow(column nowrap);
+        @include justify-content(space-evenly);
+        @include align-items(flex-start);
+      }
     }
 
     h1 {
@@ -26,7 +37,7 @@ section.Welcome {
 
     h2 {
       width: 80%;
-      margin-top: -1vh;
+      margin-top: -2vh;
 
       font-size: 26px;
       line-height: 55px;
@@ -54,7 +65,7 @@ section.Welcome {
 
     div.social-btns {
       width: 275px;
-      margin-top: 4vh;
+      margin-top: 3vh;
 
       @include flexbox();
       @include flex-flow(row nowrap);
