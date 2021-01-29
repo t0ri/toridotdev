@@ -35,7 +35,7 @@ function App() {
 
       <div className="content-container">
         <Welcome />
-        <Projects />
+        {/* <Projects /> */}
       </div>
       { consoleMsg() }
     </div>
