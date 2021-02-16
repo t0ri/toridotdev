@@ -14,7 +14,7 @@ section.Welcome {
         font-family: $font-heading;
         font-weight: 700;
 
-        background: linear-gradient(180deg, #CB7BBE 0%, #DC33C1 100%);
+        background: linear-gradient(180deg, #CB7BBE 5%, #DC33C1 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -34,9 +34,10 @@ section.Welcome {
       button {
         padding: 1em 1em 1em 1em;
 
-        background: linear-gradient(180deg, #EE74DA 55%, #DC33C1 100%);
+        background: linear-gradient(180deg, #CB7BBE 65%, #DC33C1 100%);
 
         border: 1px solid $color-light-pink;
+
         border-radius: 60px;
 
         @include box-shadow(0px 6px 6px rgba(0, 0, 0, 0.5));
@@ -74,8 +75,8 @@ section.Welcome {
       padding-right: 5vw;
 
       .flex-container {
-        height: 25vh;
-  
+        height: 40vh;
+
         @include flexbox();
         @include flex-flow(row nowrap);
         @include justify-content(space-between);
@@ -92,10 +93,10 @@ section.Welcome {
           
           h2 {
             width: 90%;
-            margin-top:2vh;
+            margin-top: 8vh;
 
             font-size: 1.25em;
-            line-height: 1.5em;
+            line-height: 1.75em;
             color: $color-white;
             font-family: $font-stack;
             font-weight: 300;
@@ -105,12 +106,6 @@ section.Welcome {
           button {
             padding: 1em 2em 1em 2em;
 
-            background: linear-gradient(180deg, #EE74DA 55%, #DC33C1 100%);
-
-            border: 1px solid $color-light-pink;
-            border-radius: 60px;
-
-            font-family: $font-stack;
             font-size: 1em;
             letter-spacing: 0.15em;
           }
@@ -141,7 +136,7 @@ section.Welcome {
           object-fit: cover;
           object-position: 20% 0;
   
-          height: 25vh;
+          height: 35vh;
           width: 30vw;
         }
       }
@@ -159,13 +154,12 @@ section.Welcome {
       }
 
       .flex-container {
-        height: 70vh;
+        height: 60vh;
         margin-top: -1vh;
 
         div.left-content {
           width: 60vw;
           height: 50vh;
-
 
           h2 {
             width: 85%;
@@ -275,10 +269,10 @@ section.Welcome {
 
           h2 {
             width: 80%;
-            margin-top: 1vh;
+            margin-top: 6vh;
 
             font-size: 1.75em;
-            line-height: 1.5em;
+            line-height: 1.6em;
           }
 
           button {
@@ -293,8 +287,8 @@ section.Welcome {
             margin-top: 4vh;
 
             img {
-              height: 60px;
-              width: 60px;
+              height: 50px;
+              width: 50px;
             }
           }
         }
