@@ -1,0 +1,51 @@
+@import '../../helper.scss';
+
+section.Articles {
+  background-color: $color-light-grey;
+
+  // Phones
+  @media (min-width: 300px) {
+    
+    h3 {
+      width: 85%;
+      margin-top: -1vh;
+      
+      font-family: $font-heading;
+      color: $color-dark-purple;
+      font-size: 1.25em;
+      line-height: $font-line-height;
+      
+      a {
+        text-decoration: underline solid $color-dark-grey 1px;
+      }
+    }
+    
+    .article-view {
+      @include flexbox();
+      @include flex-flow(column nowrap);
+      @include justify-content(space-evenly);
+      @include align-items(center);
+
+      margin-right: 5vw;
+      margin-top: -2vh;
+      height: 48vh;
+    }
+  }
+  // Tablets
+  @media (min-width: 756px) {
+
+  }
+  // MacBook (13") = 1280px
+  @media (min-width: 1000px) {
+
+  }
+  // MacBook (15")
+  @media (min-width: 1680px) {
+
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+
+  }
+}
+

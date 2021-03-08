@@ -1,0 +1,57 @@
+@import '../../../../helper.scss';
+
+.ArticleCard {
+  // Phones
+  @media (min-width: 300px) {
+    overflow: hidden;
+
+    height: 12.5vh;
+    width: 90vw;
+
+    background: $color-white;
+    border: 3.5px solid $color-white;
+    border-radius: 25px;
+
+    a {
+      @include flexbox();
+      @include flex-flow(row nowrap);
+      @include justify-content(center);
+
+      div.img {
+        width: auto;
+        img {
+          margin-left: -5vw;
+          
+          max-width: 15vh;
+          height: 15vh;
+          overflow: hidden;
+  
+          object-fit: cover;
+          object-position: left 10%;
+        }
+      }
+  
+      div.text {
+        margin: 3vh 1vw 1vh 3vw;
+  
+        @include flexbox();
+        @include flex-flow(column nowrap);
+        @include justify-content(space-around);
+  
+        h4 {
+          font-size: 1em;
+          color: $color-light-pink;
+          font-family: $font-heading;
+          font-weight: 600;
+        }
+  
+        p {
+          margin-top: -5vh;
+          font-size: .75em;
+          color: $color-dark-grey;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+}

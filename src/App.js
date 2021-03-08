@@ -1,6 +1,7 @@
 import Navigation from './components/Navigation/Navigation'
 import Welcome from './components/Welcome/Welcome'
 import Projects from './components/Projects/Projects'
+import Articles from './components/Articles/Articles'
 
 
 import './App.scss'
@@ -36,6 +37,8 @@ function App() {
       <div className="content-container">
         <Welcome />
         <Projects />
+        <Articles />
+
       </div>
       {/* { consoleMsg() } */}
     </div>

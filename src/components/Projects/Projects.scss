@@ -1,7 +1,7 @@
 @import '../../helper.scss';
 
 section.Projects {
-  height: 100vh;
+  padding-bottom: 5vh;
 
   // TODO: background
   background-color: lighten($color-light-pink, 30%);
