@@ -4,32 +4,37 @@ div.TimelineItem {
   // Phones
   @media (min-width: 300px) {
     width: 80vw;
-    background: $color-white;
     padding: 2vh;
     margin-bottom: 2vh;
 
+    background: $color-white;
+    @include box-shadow(0px 2px 5px 2px rgba(130, 131, 166, 0.25));
+
     div.content {
-      // width: 90%;
       h2 {
-        font-family: $font-heading;
         font-size: 1.25em;
         line-height: 1.25em;
         letter-spacing: .075em;
         font-weight: 500;
+        font-family: $font-heading;
         color: $color-dark-purple;
       }
 
       p {
-        font-family: $font-stack;
         font-size: 1.2em;
         font-weight: 300;
+        font-family: $font-stack;
       }
     }
   }
   // Tablets
   @media (min-width: 756px) {
-    div.content {
+    margin-left: 5vw;
+    width: 65vw;
 
+    div.content {
+      margin-left: 0;
+      padding: 1vw;
     }
   }
   // MacBook (13") = 1280px x 800px

@@ -3,9 +3,6 @@
 div.TimelineDate {
   // Phones
   @media (min-width: 300px) {
-    div.dot {
-      
-    }
     h1 {
       color: $color-hot-pink;
       font-weight: 200;
@@ -14,8 +11,27 @@ div.TimelineDate {
   }
   // Tablets
   @media (min-width: 756px) {
-    div.dot {
+    width: auto;
 
+    @include flexbox();
+    @include flex-flow(row nowrap);
+    @include justify-content(flex-start);
+    @include align-items(center);
+    
+    div.dot {
+      height: 20px;
+      width: 20px;
+      border-radius: 20px;
+
+      z-index: 999;
+      margin-left: -12px;
+
+      border: 3px solid $color-light-purple;
+      background-color: $color-light-grey;
+    }
+
+    h1 {
+      margin-left: 2.5vw;
     }
   }
   // MacBook (13") = 1280px x 800px

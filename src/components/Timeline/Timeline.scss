@@ -10,8 +10,22 @@ section.Timeline {
   }
   // Tablets
   @media (min-width: 756px) {
-    div.content {
+    position: relative;
+    overflow: hidden;
 
+    &::before {
+      content: ' ';
+      position: absolute;
+      z-index: 0;
+
+      width: 2px;
+      background-color: $color-medium-purple;
+      height: 100%;
+      left: 20vw;
+    }
+
+    div.content {
+      margin-left: 5vw;
     }
   }
   // MacBook (13") = 1280px x 800px

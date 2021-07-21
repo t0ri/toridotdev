@@ -37,7 +37,7 @@ export default function Timeline() {
         subtitle: 'Responsibilities in frontend, design, UI/UX in team of 3 interns and 1 industry mentor/manager.',
       },
       {
-        title: 'Completed BS in Applied Computer Science with concentration in Frontend Web.',
+        title: 'Graduated with BS in Applied Computer Science with concentration in Frontend Web.',
         subtitle: 'Studied computer science and fullstack web development, with a focus in frontend.',
       },
     ],
