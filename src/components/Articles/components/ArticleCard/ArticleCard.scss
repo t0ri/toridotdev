@@ -15,42 +15,147 @@
     a {
       @include flexbox();
       @include flex-flow(row nowrap);
-      @include justify-content(center);
 
       div.img {
         width: auto;
         img {
-          margin-left: -5vw;
+          margin-left: -2vw;
           
           max-width: 15vh;
           height: 15vh;
           overflow: hidden;
-  
+
           object-fit: cover;
           object-position: left 10%;
         }
       }
-  
+
       div.text {
-        margin: 3vh 1vw 1vh 3vw;
-  
+        max-height: 14vh;
+        margin: 0vh 1vw 1vh 3vw;
+
         @include flexbox();
         @include flex-flow(column nowrap);
         @include justify-content(space-around);
-  
+
         h4 {
-          font-size: 1em;
+          margin-top: -1%;
+          font-size: .85em;
           color: $color-light-pink;
           font-family: $font-heading;
           font-weight: 600;
         }
-  
+
         p {
+          width: 90%;
+
           margin-top: -5vh;
           font-size: .75em;
           color: $color-dark-grey;
           line-height: 1.5em;
         }
+      }
+    }
+  }
+  // Tablets
+  @media (min-width: 756px) {
+    width: 80vw;
+    margin-right: 10vw;
+
+    div.text {
+      h4 {
+        width: 70%;
+        font-size: 1.35em;
+      }
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+  // MacBook (13") = 1280px
+  @media (min-width: 1000px) {
+    width: 20vw;
+    height: 50vh;
+    margin-right: 4vw;
+
+    // Formatting for third article title
+    &:nth-of-type(3n) div.text h4 {
+      width: 90%;
+    }
+
+    a {
+      @include flexbox();
+      @include flex-flow(column nowrap);
+      @include align-items(center);
+
+      div.img {
+        width: auto;
+        img {
+          margin-left: 0vw;
+
+          max-width: 40vh;
+          height: 20vh;
+          overflow: hidden;
+
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+      }
+
+      div.text {
+        @include flexbox();
+        @include flex-flow(column nowrap);
+        @include justify-content(space-between);
+
+        h4 {
+          margin-top: 2vh;
+          width: 80%;
+          font-size: 1.3em;
+          line-height: 1.5em;
+          text-align: center;
+        }
+
+        p {
+          margin-top: -2vh;
+          font-size: .95em;
+          line-height: 1.75em;
+          text-align: center;
+        }
+      }
+    }
+  }
+  // MacBook (15")
+  @media (min-width: 1680px) {
+    width: 25vw;
+    height: 50vh;
+
+    a div.text {
+      h4 {
+        font-size: 1.3em;
+      }
+
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+    margin-right: 2vw;
+    height: 45vh;
+
+    a div.img img {
+      max-width: 50vh;
+      height: 20vh;
+    }
+
+    a div.text {
+      h4 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1.25em;
       }
     }
   }

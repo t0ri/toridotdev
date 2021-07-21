@@ -8,7 +8,7 @@ export default function ArticleCard(props) {
           <img src={props.imgLink} alt={props.title} />
         </div>
         <div className="text">
-          <h4>{props.title}</h4> 
+          <h4>{props.title}</h4>
           <p>{props.desc}</p>
         </div>
       </a>

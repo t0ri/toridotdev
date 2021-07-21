@@ -17,7 +17,7 @@ export default function Articles() {
       imgLink: 'https://miro.medium.com/max/2400/0*_ngiIPRQoru47fSN.png',
     },
     {
-      title: 'Taking a Product to the Next Level with Research and Planning',
+      title: 'Taking a Product to the Next Level',
       desc: ' Preparing for your creation and its impact guides an idea to success.',
       link: 'https://medium.com/@t0ri/taking-a-product-to-the-next-level-with-research-and-planning-270dd53fcfab',
       imgLink: 'https://miro.medium.com/max/1000/1*vMJqMik4XzNaaBiUBAcmcA.jpeg',
@@ -28,7 +28,7 @@ export default function Articles() {
     <section className="Articles" id="Articles">
       <div className="content">
         <h3>
-        These are my favorite technical articles I’ve authored,&nbsp;
+        These are my favorite technical articles I’ve authored, &nbsp;
           <a 
             href="https://medium.com/@t0ri"
             alt="View Writing on Medium"
@@ -46,6 +46,7 @@ export default function Articles() {
                 desc={article.desc}
                 link={article.link}
                 imgLink={article.imgLink}
+                key={article.link}
               />
           )})}
         </div>

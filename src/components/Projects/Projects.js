@@ -89,15 +89,19 @@ export default function Projects() {
           </a>
         </h3>
         <div className="project-view">
-          {projectsList.map((project) => {
-            return (
-              <ProjectCard
-                src={project.src}
-                title={project.title}
-                alt={project.alt}
-                shortDesc={project.shortDesc}
-              />
-          )})}
+          {
+            projectsList.map((project) => {
+              return (
+                <ProjectCard
+                  src={project.src}
+                  title={project.title}
+                  alt={project.alt}
+                  shortDesc={project.shortDesc}
+                  key={project.src}
+                />
+              )
+            })
+          }
         </div>
       </div>
     </section>
