@@ -9,6 +9,7 @@
   @media (min-width: 756px) {
     position: fixed;
     display: block;
+    z-index: 999;
 
     padding-top: 9vh;
     margin-left: -2.5vw;
