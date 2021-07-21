@@ -1,0 +1,40 @@
+@import '../../../../helper.scss';
+
+div.TimelineDate {
+  // Phones
+  @media (min-width: 300px) {
+    div.dot {
+      
+    }
+    h1 {
+      color: $color-hot-pink;
+      font-weight: 200;
+      font-size: 2em;
+    }
+  }
+  // Tablets
+  @media (min-width: 756px) {
+    div.dot {
+
+    }
+  }
+  // MacBook (13") = 1280px x 800px
+  @media (min-width: 1000px) {
+    div.dot {
+
+    }
+  }
+  // MacBook (15") = 1680px x 1050px
+  @media (min-width: 1680px) {
+    div.dot {
+
+    }
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+    div.dot {
+
+    }
+  }
+}
+

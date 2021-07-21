@@ -1,0 +1,53 @@
+@import '../../../../helper.scss';
+
+div.TimelineItem {
+  // Phones
+  @media (min-width: 300px) {
+    width: 80vw;
+    background: $color-white;
+    padding: 2vh;
+    margin-bottom: 2vh;
+
+    div.content {
+      // width: 90%;
+      h2 {
+        font-family: $font-heading;
+        font-size: 1.25em;
+        line-height: 1.25em;
+        letter-spacing: .075em;
+        font-weight: 500;
+        color: $color-dark-purple;
+      }
+
+      p {
+        font-family: $font-stack;
+        font-size: 1.2em;
+        font-weight: 300;
+      }
+    }
+  }
+  // Tablets
+  @media (min-width: 756px) {
+    div.content {
+
+    }
+  }
+  // MacBook (13") = 1280px x 800px
+  @media (min-width: 1000px) {
+    div.content {
+
+    }
+  }
+  // MacBook (15") = 1680px x 1050px
+  @media (min-width: 1680px) {
+    div.content {
+
+    }
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+    div.content {
+
+    }
+  }
+}
