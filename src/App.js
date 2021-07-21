@@ -2,11 +2,14 @@ import Navigation from './components/Navigation/Navigation'
 import Welcome from './components/Welcome/Welcome'
 import Projects from './components/Projects/Projects'
 import Articles from './components/Articles/Articles'
+import About from './components/About/About'
+import Timeline from './components/Timeline/Timeline'
 
 
 import './App.scss'
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
   const consoleMsg = () => {
     const style = (fontSize) => {
       return `
@@ -38,6 +41,8 @@ function App() {
         <Welcome />
         <Projects />
         <Articles />
+        <About />
+        <Timeline />
 
       </div>
       {/* { consoleMsg() } */}

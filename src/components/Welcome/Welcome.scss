@@ -147,6 +147,7 @@ section.Welcome {
   @media (min-width: 1000px) {
     .content {
       width: 70vw;
+      overflow: hidden;
 
       h1 {
         font-size: 2.2em;
