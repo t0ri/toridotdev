@@ -4,6 +4,7 @@ import Projects from './components/Projects/Projects'
 import Articles from './components/Articles/Articles'
 import About from './components/About/About'
 import Timeline from './components/Timeline/Timeline'
+import Footer from './components/Footer/Footer'
 
 
 import './App.scss'
@@ -43,7 +44,7 @@ function App() {
         <Articles />
         <About />
         <Timeline />
-
+        <Footer />
       </div>
       {/* { consoleMsg() } */}
     </div>
