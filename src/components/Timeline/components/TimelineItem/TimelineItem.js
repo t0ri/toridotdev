@@ -1,8 +1,8 @@
 import './TimelineItem.scss'
 
-export default function TimelineItem({ title, subtitle }) {
+export default function TimelineItem({ title, subtitle, cardMarginController }) {
   return (
-    <div className="TimelineItem">
+    <div className={`TimelineItem ${cardMarginController ? 'left' : 'right'}`}>
       <div className="content">
         <h2>
           {title}

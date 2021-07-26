@@ -30,20 +30,31 @@ section.Timeline {
   }
   // MacBook (13") = 1280px x 800px
   @media (min-width: 1000px) {
-    div.content {
+    &::before {
+      width: 4px;
+      left: 55vw;
+    }
 
+    div.content {
+      
     }
   }
   // MacBook (15") = 1680px x 1050px
   @media (min-width: 1680px) {
+    &::before {
+      width: 4px;
+      left: 53vw;
+    }
+
     div.content {
 
     }
   }
   // Large Monitors+
   @media (min-width: 1900px) {
-    div.content {
-
+    &::before {
+      width: 4px;
+      left: 50.5vw;
     }
   }
 }

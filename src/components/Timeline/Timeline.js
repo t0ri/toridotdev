@@ -1,3 +1,4 @@
+/* eslint-disable no-loop-func */
 import './Timeline.scss'
 
 import TimelineItem from './components/TimelineItem/TimelineItem'
@@ -43,20 +44,22 @@ export default function Timeline() {
     ],
   }
 
-  const createTimelineDateComponent = (year) => {
+  const createTimelineDateComponent = (year, cardMarginController) => {
     return (
       <TimelineDate
         year={year}
+        cardMarginController={cardMarginController}
         key={year}
       />
     )
   }
   
-  const createTimelineItemComponent = (title, subtitle) => {
+  const createTimelineItemComponent = (title, subtitle, cardMarginController) => {
     return (
       <TimelineItem
         title={title}
         subtitle={subtitle}
+        cardMarginController={cardMarginController}
         key={title}
       />
     )
@@ -64,12 +67,16 @@ export default function Timeline() {
 
   const renderCards = () => {
     let cards = []
+    let cardMarginController = true
     for (const year in timelineData) {
-      cards.push(createTimelineDateComponent(year))
+      cards.push(createTimelineDateComponent(year, cardMarginController))
       const items = timelineData[year]
       items.forEach((item) => {
-        cards.push(createTimelineItemComponent(item.title, item.subtitle))
+        cards.push(
+          createTimelineItemComponent(item.title, item.subtitle, cardMarginController)
+          )
       })
+      cardMarginController = !cardMarginController
     }
     return cards
   }

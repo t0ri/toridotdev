@@ -36,20 +36,32 @@ div.TimelineDate {
   }
   // MacBook (13") = 1280px x 800px
   @media (min-width: 1000px) {
+    &.left h1 {
+      margin-left: -10vw;
+    }
     div.dot {
-
+      margin-left: calc(35vw - 11px);
     }
   }
   // MacBook (15") = 1680px x 1050px
   @media (min-width: 1680px) {
+    h1 {
+      font-size: 2.5em;
+    }
+    &.left h1 {
+      margin-left: -9vw;
+    }
     div.dot {
-
+      margin-left: calc(28vw - 11px);
     }
   }
   // Large Monitors+
   @media (min-width: 1900px) {
+    &.left h1 {
+      margin-left: -8.25vw;
+    }
     div.dot {
-
+      margin-left: calc(20.5vw - 11px);
     }
   }
 }
