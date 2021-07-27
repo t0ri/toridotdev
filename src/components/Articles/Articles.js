@@ -28,14 +28,16 @@ export default function Articles() {
     <section className="Articles" id="Articles">
       <div className="content">
         <h3>
-        These are my favorite technical articles I’ve authored, &nbsp;
+        These are my favorite technical articles I’ve authored,&nbsp;
+        </h3>
+        <h3>
           <a 
             href="https://medium.com/@t0ri"
             alt="View Writing on Medium"
             target="_blank"
             rel="noreferrer"
           >
-            but you can click here to view all my writing on Medium.
+          but you can click here to view all my writing on Medium.
           </a>
         </h3>
         <div className="article-view">
