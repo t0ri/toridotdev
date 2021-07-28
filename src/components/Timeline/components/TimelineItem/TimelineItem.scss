@@ -1,0 +1,97 @@
+@import '../../../../helper.scss';
+
+div.TimelineItem {
+  // Phones
+  @media (min-width: 300px) {
+    width: 80vw;
+    padding: 2vh;
+    margin-bottom: 2vh;
+
+    background: $color-white;
+    @include box-shadow(0px 2px 5px 2px rgba(130, 131, 166, 0.25));
+
+    div.content {
+      h2 {
+        font-size: 1.25em;
+        line-height: 1.25em;
+        letter-spacing: .075em;
+        font-weight: 500;
+        font-family: $font-heading;
+        color: $color-dark-purple;
+      }
+
+      p {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.3em;
+        font-family: $font-stack;
+      }
+    }
+  }
+  // Tablets
+  @media (min-width: 756px) {
+    margin-left: 5vw;
+    width: 65vw;
+
+    div.content {
+      margin-left: 0;
+      padding: 1vw;
+    }
+  }
+  // MacBook (13") = 1280px x 800px
+  @media (min-width: 1000px) {
+    width: 30vw;
+
+    &.left {
+      margin-left: -1vw;
+    }
+    &.right {
+      margin-left: 39vw;
+    }
+  }
+  // MacBook (15") = 1680px x 1050px
+  @media (min-width: 1680px) {
+    width: 27vw;
+
+    &.left {
+      margin-left: -5vw;
+    }
+    &.right {
+      margin-left: 31.5vw;
+    }
+    div.content {
+      h2 {
+        font-size: 1.4em;
+        letter-spacing: .115em;
+      }
+      p {
+        font-size: 1.25em;
+        letter-spacing: .03em;
+      }
+    }
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+    width: 20vw;
+
+    &.left {
+      margin-left: -5.5vw;
+    }
+    &.right {
+      margin-left: 24vw;
+    }
+    
+    div.content {
+      padding: .5vw;
+
+      h2 {
+        font-size: 1.2em;
+        letter-spacing: .15em;
+      }
+      p {
+        font-size: 1em;
+        letter-spacing: .075em;
+      }
+    }
+  }
+}

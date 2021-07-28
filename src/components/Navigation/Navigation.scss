@@ -1,0 +1,51 @@
+@import '../../helper.scss';
+
+.Navigation {
+  // Phones
+  @media (min-width: 300px) {
+    display: none;
+  }
+  // Tablets
+  @media (min-width: 756px) {
+    position: fixed;
+    display: block;
+    z-index: 999;
+
+    padding-top: 9vh;
+    margin-left: -2.5vw;
+    width: 20vw;
+
+    mix-blend-mode: difference; // color change on scroll
+    color: $color-white;
+    letter-spacing: 0.15em;
+    font-size: .75em;
+    font-family: $font-stack;
+    line-height: 1em;
+
+    // TODO:
+    // Add `ul li a p` hover style
+  }
+  // MacBook (13")
+  @media (min-width: 1200px) {
+    padding-top: 10vh;
+    padding-left: 2vw;
+
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  // MacBook (15")
+  @media (min-width: 1680px) {
+    padding-left: 5vw;
+
+    font-size: 1.3em;
+    line-height: 1.75em;
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+    padding-left: 5vw;
+    padding-top: 12.75vh;
+
+    font-size: 1.25em;
+    line-height: 1.75em;
+  }
+}

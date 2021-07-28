@@ -1,0 +1,169 @@
+@import '../../../../helper.scss';
+
+.ProjectCard {
+  // Phones
+  @media (min-width: 300px) {
+    overflow: hidden;
+
+    height: 12.5vh;
+    width: 100%;
+
+    @include flexbox();
+    @include flex-flow(row nowrap);
+    @include justify-content(center);
+
+    background:
+      radial-gradient(120.35% 120.35% at 50% -10.05%,
+    rgba(255, 255, 255, 0.40) 0%,
+    rgba(255, 255, 255, 0.2) 100%);
+    border: 3.5px solid $color-white;
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+
+    div.img {
+      background-color: rgba(255, 0, 255, 0.2);
+      img {
+        margin-left: -2vw;
+        height: 15vh;
+        width: 15vh;
+
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+
+    div.text {
+      width: 70%;
+      max-height: 12.5vh;
+      // background-color: rgba(000, 255, 255, 0.25);
+
+      margin: 3vh 1vw 1vh 3vw;
+
+      @include flexbox();
+      @include flex-flow(column nowrap);
+      @include justify-content(space-around);
+
+      h4 {
+        margin-top: -1%;
+        font-size: .9em;
+        color: $color-dark-purple;
+        font-family: $font-heading;
+        font-weight: 600;
+      }
+
+      p {
+        width: 90%;
+
+        font-size: .75em;
+        color: $color-dark-grey;
+        line-height: 1.5em;
+        margin-top: -8.5%;
+      }
+    }
+  }
+  // Tablets
+  @media (min-width: 756px) {
+    height: 15vh;
+    width: 47%;
+
+    div.img {
+      img {
+        margin-left: -2vw;
+        height: 15vh;
+        width: 15vh;
+        object-position: -10% 0%;
+      }
+    }
+
+    div.text {
+      width: 90%;
+      max-height: 14vh;
+
+      margin: 3vh 1vw 1vh 1vw;
+
+      h4 {
+        font-size: 1em;
+      }
+
+      p {
+        font-size: .8em;
+        color: $color-dark-grey;
+        line-height: 1.5em;
+        margin-top: -8%;
+      }
+    }
+  }
+  // MacBook (13") = 1280px
+  @media (min-width: 1000px) {
+    height: 17.5vh;
+    width: 33.5vw;
+
+    div.img {
+      img {
+        margin-left: -2vw;
+        height: 22vh;
+        width: 22vh;
+        object-position: -10% 0%;
+      }
+    }
+
+    div.text {
+      h4 {
+        font-size: 1.25em;
+      }
+
+      p {
+        font-size: .95em;
+      }
+    }
+  }
+  // MacBook (15")
+  @media (min-width: 1680px) {
+    height: 17.5vh;
+    width: 30vw;
+
+    div.img {
+      img {
+        margin-left: -2vw;
+        height: 22vh;
+        width: 22vh;
+        object-position: -10% 0%;
+      }
+    }
+
+    div.text {
+      h4 {
+        font-size: 1.35em;
+      }
+
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+    height: 18vh;
+    width: 24vw;
+
+    div.img {
+      img {
+        margin-left: -2vw;
+        height: 23vh;
+        width: 23vh;
+        object-position: -10% 0%;
+      }
+    }
+
+    div.text {
+      h4 {
+        font-size: 1.35em;
+      }
+
+      p {
+        font-size: 1.15em;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,68 @@
+@import '../../../../helper.scss';
+
+div.TimelineDate {
+  // Phones
+  @media (min-width: 300px) {
+    h1 {
+      color: $color-hot-pink;
+      font-weight: 200;
+      font-size: 2em;
+    }
+  }
+  // Tablets
+  @media (min-width: 756px) {
+    width: auto;
+
+    @include flexbox();
+    @include flex-flow(row nowrap);
+    @include justify-content(flex-start);
+    @include align-items(center);
+    
+    div.dot {
+      height: 20px;
+      width: 20px;
+      border-radius: 20px;
+
+      z-index: 999;
+      margin-left: -12px;
+
+      border: 3px solid $color-light-purple;
+      background-color: $color-light-grey;
+    }
+
+    h1 {
+      margin-left: 2.5vw;
+    }
+  }
+  // MacBook (13") = 1280px x 800px
+  @media (min-width: 1000px) {
+    &.left h1 {
+      margin-left: -10vw;
+    }
+    div.dot {
+      margin-left: calc(35vw - 11px);
+    }
+  }
+  // MacBook (15") = 1680px x 1050px
+  @media (min-width: 1680px) {
+    h1 {
+      font-size: 2.5em;
+    }
+    &.left h1 {
+      margin-left: -9vw;
+    }
+    div.dot {
+      margin-left: calc(28vw - 11px);
+    }
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+    &.left h1 {
+      margin-left: -8.25vw;
+    }
+    div.dot {
+      margin-left: calc(20.5vw - 11px);
+    }
+  }
+}
+

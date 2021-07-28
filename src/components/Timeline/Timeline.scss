@@ -1,0 +1,61 @@
+@import '../../helper.scss';
+
+section.Timeline {
+  // Phones
+  @media (min-width: 300px) {
+    background-color: $color-light-grey;
+
+    padding-bottom: 5vh;
+  }
+  // Tablets
+  @media (min-width: 756px) {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      z-index: 0;
+
+      margin-top: 4%;
+      width: 2px;
+      background-color: $color-medium-purple;
+      height: 67%;
+      left: 20vw;
+    }
+
+    div.content {
+      margin-left: 5vw;
+    }
+  }
+  // MacBook (13") = 1280px x 800px
+  @media (min-width: 1000px) {
+    &::before {
+      width: 4px;
+      left: 55vw;
+    }
+  }
+  // MacBook (15") = 1680px x 1050px
+  @media (min-width: 1680px) {
+    
+    &::before {
+      margin-top: 2%; 
+      left: 53vw;
+    }
+
+  }
+  // Large Monitors
+  @media (min-width: 1900px) {
+    &::before {
+      left: 50.5vw;
+    }
+  }
+
+  @media (min-width: 3000px) {
+    &::before {
+      margin-top: 1.5%;
+      height: 66%;
+      left: 50.5vw;
+    }
+  }
+}

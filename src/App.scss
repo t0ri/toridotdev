@@ -1,0 +1,50 @@
+@import './helper.scss';
+
+body,
+section,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $color-dark-purple;
+}
+
+.App {
+  font-size: $font-size;
+  line-height: $font-line-height;
+  font-family: $font-stack;
+
+  .content-container {
+    section {
+      // Phones
+      @media (min-width: 300px) {
+        padding-top: 5vh;
+        padding-left: 5vw;
+
+        overflow-x: hidden;
+      }
+      // Tablets
+      @media (min-width: 756px) {
+        padding-top: 7.25vh;
+        padding-left: 15vw;
+      }
+      // MacBook (13") = 1280px
+      @media (min-width: 1000px) {
+        padding-top: 7.25vh;
+        padding-left: 15vw;
+      }
+      // MacBook (15")
+      @media (min-width: 1680px) {
+        padding-top: 7.25vh;
+        padding-left: 20vw;
+      }
+      // Large Monitors+
+      @media (min-width: 1900px) {
+        padding-top: 10vh;
+        padding-left: 25vw;
+      }
+    }
+  }
+}
