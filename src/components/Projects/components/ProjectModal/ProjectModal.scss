@@ -1,0 +1,51 @@
+@import '../../../../helper.scss';
+
+section.ProjectModal {
+  // Phones
+  @media (min-width: 300px) {
+    position: absolute;
+    margin-left: -10vw;
+    z-index: 999;
+    
+    .content {
+      position: relative;
+      background-color: white;
+      height: 100vh;
+      width: 100vw;
+
+      h1 {
+        font-family: $font-heading;
+        font-size: 1.35em;
+        letter-spacing: .04em;
+        color: $color-dark-purple;
+      }
+
+      div.subtitle {
+        p {
+          display: inline;
+        }
+      }
+
+      a img {
+        height: 20px;
+      }
+
+      .content-right img {
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+  // Tablets
+  @media (min-width: 756px) {
+  }
+  // MacBook (13") = 1280px
+  @media (min-width: 1000px) {
+  }
+  // MacBook (15")
+  @media (min-width: 1680px) {
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+  }
+}
