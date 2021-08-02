@@ -9,6 +9,7 @@ function ProjectModal({ project }) {
   return (
     <section className="ProjectModal">
       <div className="content">
+        <button onClick={() => project.projectModalController(false)} alt='close'>hjlkl</button>
         <h1>{project.title}</h1>
         <div className="subtitle">
           <p>{project.date}</p>

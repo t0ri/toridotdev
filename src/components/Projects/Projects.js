@@ -99,9 +99,10 @@ export default class Projects extends Component {
 
   projectModalController(project) {
     if (project) {
+      console.log(project)
       this.setState({ projectModalControl: project })
     } else {
-      this.setState({ projectModalControl: false })
+      this.setState({ projectModalControl: Boolean(false) })
     }
   }
 
