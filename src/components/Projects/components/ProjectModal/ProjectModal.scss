@@ -3,40 +3,107 @@
 section.ProjectModal {
   // Phones
   @media (min-width: 300px) {
-    button {
-      background-image: '../../../../../public/assets/close-icon.png';
-    }
-
-    position: absolute;
     margin-left: -10vw;
     z-index: 999;
 
-    .content {
-      position: relative;
-      background-color: white;
-      height: 100vh;
+    div.modal-card {
+      position: fixed;
+      top: 0;
+      
+      height: 100%;
       width: 100vw;
+      
+      background-color: $color-white;
+    }
+    
+    div.content {
+      width: 90vw;
+      margin-left: 5vw;
+      margin-right: 5vw;
+      
+      div.title {
+        @include flexbox();
+        @include flex-flow(row nowrap);
+        @include justify-content(space-between);
+        @include align-items(center);
 
-      h1 {
-        font-family: $font-heading;
-        font-size: 1.35em;
-        letter-spacing: .04em;
-        color: $color-dark-purple;
-      }
+        margin-top: 10vh;
+        
+        h1 {
+          font-family: $font-heading;
+          font-size: 1.45em;
+          letter-spacing: .125em;
+          color: $color-dark-purple;
+        }
 
-      div.subtitle {
-        p {
-          display: inline;
+        button {
+          height: 20px;
+          width: 20px;
+          background: url('../../../../assets/cancel.png');
+          background-size: 20px;
+          border: none;
         }
       }
 
-      a img {
-        height: 20px;
+      div.subtitle {
+        @include flexbox();
+        @include flex-flow(column nowrap);
+
+        margin-top: -1vh;
+
+        p {
+          margin-bottom: -.5vh;
+          margin-top: 0vh;
+
+          font-size: 1.1em;
+          font-weight: 300;
+          letter-spacing: .1em;
+        }
+
+        a img {
+          height: 12px;
+          width: 12px;
+
+          margin-left: 2.5vw;
+        }
       }
 
-      .content-right img {
-        height: 100px;
-        width: 100px;
+      div.content-controller {
+        @include flexbox();
+        @include flex-flow(column nowrap);
+
+        margin-top: 1vh;
+
+        height: 70vh;
+        overflow-y: scroll !important;
+
+        div p {
+          font-size: .9em;
+          letter-spacing: .1em;
+          line-height: 1.75em;
+          font-weight: 300;
+        }
+      }
+
+      div {
+        img {
+          margin-top: 3vh;
+
+          height: 40vh;
+          width: 90vw;
+
+          object-fit: cover;
+          object-position: 0% 0%;
+        }
+
+        h2 {
+          font-size: 1.15em;
+          line-height: 1.6em;
+          font-weight: 300;
+          color: $color-hot-pink;
+
+          margin-bottom: 0vh;
+        }
       }
     }
   }

@@ -99,10 +99,11 @@ export default class Projects extends Component {
 
   projectModalController(project) {
     if (project) {
-      console.log(project)
       this.setState({ projectModalControl: project })
+      document.body.style.overflow = 'hidden'
     } else {
       this.setState({ projectModalControl: Boolean(false) })
+      document.body.style.overflow = 'unset'
     }
   }
 
@@ -130,6 +131,7 @@ export default class Projects extends Component {
                   title={project.title}
                   shortDesc={project.shortDesc}
                   longDesc={project.longDesc}
+                  techDesc={project.techDesc}
                   date={project.date}
                   githubLink={project.githubLink}
                   demoLink={project.demoLink}

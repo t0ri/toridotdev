@@ -6,29 +6,63 @@ function ProjectModal({ project }) {
       <div></div>
     )
   }
+
+  let scrollControl = document.getElementsByClassName('content-controller')
+  scrollControl.scrollTop = 100
+
   return (
     <section className="ProjectModal">
-      <div className="content">
-        <button onClick={() => project.projectModalController(false)} alt='close'>hjlkl</button>
-        <h1>{project.title}</h1>
-        <div className="subtitle">
-          <p>{project.date}</p>
-          <a href={project.githubLink}>
-            <p>View on Github</p>
-            <img src="./assets/Projects/link-icon.jpeg" alt="link icon" />
-          </a>
-          <a href={project.demoLink}>
-            <p>View Demo</p>
-            <img src="./assets/Projects/link-icon.jpeg" alt="link icon" />
-          </a>
+      <div className="modal-card">
+
+        <div className="content">
+
+          {/* Title and Modal Exit Button */}
+          <div className="title">
+            <h1>{project.title}</h1>
+            <button
+              onClick={() => project.projectModalController(false)}
+              alt='close'
+            >
+            </button>
+          </div>
+
+          {/* Project Date and Links to Project */}
+          <div className="subtitle">
+            <p>{project.date}</p>
+
+            <a href={project.githubLink}>
+              <p className="underline">View on Github</p>
+              <img
+                src="./assets/Projects/link-icon.jpeg"
+                alt="link icon"
+              />
+            </a>
+
+            <a href={project.demoLink}>
+              <p className="underline">View Demo</p>
+              {/* TODO: Replace `link-icon.jpeg` */}
+              <img
+                src="./assets/Projects/link-icon.jpeg"
+                alt="link icon"
+              />
+            </a>
+          </div>
+
+          <div className="content-controller">
+            {/* Project Image and Tech Description */}
+            <div>
+              <img src={project.src} alt={project.alt} />
+              <h2>{project.techDesc}</h2>
+            </div>
+
+            {/* Long Description */}
+            <div>
+              <p>{project.longDesc}</p>
+            </div>
+          </div>
+
         </div>
-        <div className="content-left">
-          <p>{project.longDesc}</p>
-        </div>
-        <div className="content-right">
-          <img src={project.src} alt={project.alt} />
-          <h2>{project.techDesc}</h2>
-        </div>
+
       </div>
     </section>
   )
