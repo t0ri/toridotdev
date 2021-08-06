@@ -7,9 +7,6 @@ function ProjectModal({ project }) {
     )
   }
 
-  let scrollControl = document.getElementsByClassName('content-controller')
-  scrollControl.scrollTop = 100
-
   return (
     <section className="ProjectModal">
       <div className="modal-card">
