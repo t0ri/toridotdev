@@ -101,6 +101,11 @@ export default class Projects extends Component {
     if (project) {
       this.setState({ projectModalControl: project })
       document.body.style.overflow = 'hidden'
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' || e.key === 'q') {
+          this.projectModalController()
+        }
+      })
     } else {
       this.setState({ projectModalControl: Boolean(false) })
       document.body.style.overflow = 'unset'
