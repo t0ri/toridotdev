@@ -161,7 +161,7 @@ section.ProjectModal {
     div.content {
       width: 65vw;
       div.title {
-        margin-top: 15vh;
+        margin-top: 12.5vh;
         h1 {
           font-size: 1.75em;
         }
@@ -178,7 +178,6 @@ section.ProjectModal {
           margin-top: -5vh;
           font-size: 1.2em;
           letter-spacing: .125em;
-          
 
           &:not(.underline) {
             border-bottom: 4px solid white;
@@ -187,15 +186,15 @@ section.ProjectModal {
               margin-right: 1vw;
             }
           }
-            
         }
 
         a {
           &:nth-of-type(1)::after {
             content: ' |';
+            margin-right: 1vw;
+
             font-size: 1.2em;
             font-weight: 100;
-            margin-right: 1vw;
           }
 
           img {
@@ -204,21 +203,36 @@ section.ProjectModal {
         }
       }
 
-
       div.content-controller {
-        // @include flex-flow(row nowrap);
+        @include flex-flow(row-reverse nowrap);
 
-        div p {
-          font-size: 1em;
-        }
-        div img {
+        height: 65vh;
+        width: 65vw;
 
+        overflow-y: visible !important;
+
+        div {
+          &:nth-of-type(1){ width: 35vw; }
+          &:nth-of-type(2){ width: 30vw; }
+          
+          img {
+            width: 99%;
+          }
+          h2 {
+            font-size: 1.25em;
+          }
+          p {
+            width: 90%;
+
+            font-size: 1em;
+          }
         }
       }
     }
   }
   // MacBook (15")
   @media (min-width: 1680px) {
+
   }
   // Large Monitors+
   @media (min-width: 1900px) {
