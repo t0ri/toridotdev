@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import ProjectCard from './components/ProjectCard/ProjectCard'
 import ProjectModal from './components/ProjectModal/ProjectModal'
 
@@ -23,7 +24,7 @@ export default class Projects extends Component {
         solution in the browser or Node. I used Jest to write a 
         test suite integrated with Travis CI to ensure the NPM package 
         functions with each release.`,
-        date: "July 20 2017",
+        date: "July 2017",
         demoLink: "https://",
         githubLink: "https://",
         techDesc: "Prefix-Trie NPM library, Jest Tests with Continuous Integration with Travis CI",
@@ -44,7 +45,7 @@ export default class Projects extends Component {
         product. Adding statistics allowed users to view more 
         precise data about when they logged a "little", and if 
         it was a "win" or "nerve".`,
-        date: "July 20 2017",
+        date: "July 2017",
         demoLink: "https://",
         githubLink: "https://",
         techDesc: "Node, Express, MongoDB, Handlebars; React",
@@ -65,7 +66,7 @@ export default class Projects extends Component {
         In future updates, I plan to create a more specific mobile 
         version and add my Autocomplete library to allow users to 
         search for a specific villager.`,
-        date: "July 20 2017",
+        date: "July 2017",
         demoLink: "https://",
         githubLink: "https://",
         techDesc: "Vanilla JS with total refactor, and enhanced UI/UX over versions",
@@ -85,7 +86,7 @@ export default class Projects extends Component {
         clickable prototypes. While the course was primarily 
         design–based, and it was fun to plan and design a static 
         site as opposed to products with dynamic interfaces.`,
-        date: "July 20 2017",
+        date: "July 2017",
         demoLink: "https://",
         githubLink: "https://",
         techDesc: "Figma, Photoshop",

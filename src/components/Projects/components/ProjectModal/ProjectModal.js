@@ -29,6 +29,7 @@ function ProjectModal({ project }) {
 
             <a href={project.githubLink}>
               <p className="underline">View on Github</p>
+              {/* TODO: Replace `link-icon.jpeg` */}
               <img
                 src="./assets/Projects/link-icon.jpeg"
                 alt="link icon"
