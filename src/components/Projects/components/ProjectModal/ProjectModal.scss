@@ -216,14 +216,13 @@ section.ProjectModal {
           &:nth-of-type(2){ width: 30vw; }
           
           img {
-            width: 99%;
+            width: 100%;
           }
           h2 {
             font-size: 1.25em;
           }
           p {
             width: 90%;
-
             font-size: 1em;
           }
         }
@@ -232,7 +231,60 @@ section.ProjectModal {
   }
   // MacBook (15")
   @media (min-width: 1680px) {
+    div.modal-card {
+      height: 80vh;
+      width: 68vw;
 
+      margin-top: 7.5vh;
+      margin-left: -10vw;
+    }
+
+    div.content {
+      width: 60vw;
+      div.title {
+        h1 {
+          font-size: 2.2em;
+        }
+      }
+      
+      div.subtitle {
+        margin-top: -3vh;
+
+        p, a p { 
+          font-size: 1.5em;
+
+          &:not(.underline) {
+            border-bottom: 8px solid white;
+          }
+        }
+        a {
+          &:nth-of-type(1)::after {
+            content: ' |';
+            margin-right: 1vw;
+
+            font-size: 1.5em;
+            font-weight: 100;
+          }
+        }
+      }
+
+      div.content-controller {
+        margin-left: -5vw;
+        div {
+          &:nth-of-type(1){ width: 30vw; }
+          &:nth-of-type(2){ width: 30vw; }
+
+          p {
+            width: 90%;
+            font-size: 1.3em;
+          }
+
+          h2 {
+            font-size: 1.7em;
+          }
+        }
+      }
+    }
   }
   // Large Monitors+
   @media (min-width: 1900px) {
