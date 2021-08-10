@@ -8,7 +8,7 @@ function ProjectModal({ project }) {
   }
 
   return (
-    <section className="ProjectModal">
+    <div className="ProjectModal">
       <div className="modal-card">
 
         <div className="content">
@@ -62,7 +62,7 @@ function ProjectModal({ project }) {
         </div>
 
       </div>
-    </section>
+    </div>
   )
 }
 

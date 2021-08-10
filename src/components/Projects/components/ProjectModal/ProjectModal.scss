@@ -1,9 +1,9 @@
 @import '../../../../helper.scss';
 
-section.ProjectModal {
+div.ProjectModal {
   // Phones
   @media (min-width: 300px) {
-    margin-left: -10vw;
+    margin-left: -5vw;
     z-index: 999;
 
     div.modal-card {
@@ -112,7 +112,7 @@ section.ProjectModal {
   // Tablets
   @media (min-width: 756px) {
     div.modal-card {
-      margin-left: -10vw;
+      margin-left: 5vw;
       margin-top: 10vh;
 
       height: 80vh;
@@ -154,7 +154,7 @@ section.ProjectModal {
       width: 75vw;
 
       margin-top: 7.5vh;
-      margin-left: -5.5vw;
+      margin-left: 4vw;
 
       border-radius: 30px;
     }
@@ -237,7 +237,7 @@ section.ProjectModal {
       width: 68vw;
 
       margin-top: 7.5vh;
-      margin-left: -10vw;
+      margin-left: 5vw;
     }
 
     div.content {
@@ -294,7 +294,7 @@ section.ProjectModal {
       height: 80vh;
 
       margin-top: 10vh;
-      margin-left: -16.5vw;
+      margin-left: 3vw;
 
       div.content {
         width: 50vw;
