@@ -288,5 +288,47 @@ section.ProjectModal {
   }
   // Large Monitors+
   @media (min-width: 1900px) {
+    div.modal-card {
+      width: 55vw;
+      height: 80vh;
+
+      margin-top: 10vh;
+      margin-left: -16.5vw;
+
+      div.content {
+        width: 50vw;
+        margin-left: 2.5vw;
+        
+        div.title h1 {
+          font-size: 2.2em;
+        }
+
+        div.content-controller {
+          margin-left: -13vw;
+          
+          div {
+            &:nth-of-type(1) {
+              width: 30vw;
+              margin-left: 2vw;
+
+              h2 { width: 80%; }
+              img {
+                width: 28vw;
+                height: 30vh;
+                object-position: 30% 0%;
+              }
+            }
+            &:nth-of-type(2) {
+              width: 20vw;
+
+              p {
+                width: 100%;
+                font-size: 1.25em;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
