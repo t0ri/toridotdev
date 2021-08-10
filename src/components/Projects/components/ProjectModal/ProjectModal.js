@@ -31,7 +31,7 @@ function ProjectModal({ project }) {
               <p className="underline">View on Github</p>
               {/* TODO: Replace `link-icon.jpeg` */}
               <img
-                src="./assets/Projects/link-icon.jpeg"
+                src="./assets/Projects/open-in-new-tab.png"
                 alt="link icon"
               />
             </a>
@@ -40,7 +40,7 @@ function ProjectModal({ project }) {
               <p className="underline">View Demo</p>
               {/* TODO: Replace `link-icon.jpeg` */}
               <img
-                src="./assets/Projects/link-icon.jpeg"
+                src="./assets/Projects/open-in-new-tab.png"
                 alt="link icon"
               />
             </a>
