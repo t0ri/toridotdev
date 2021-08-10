@@ -11,12 +11,12 @@ html {
   background-color: $color-dark-purple;
 }
 
-.App {
+div.App {
   font-size: $font-size;
   line-height: $font-line-height;
   font-family: $font-stack;
 
-  .content-container {
+  div.content-container {
     section {
       // Phones
       @media (min-width: 300px) {

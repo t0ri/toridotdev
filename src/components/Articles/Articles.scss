@@ -5,10 +5,14 @@ section.Articles {
 
   // Phones
   @media (min-width: 300px) {
-    
+    div.content {
+      margin-top: 3vh;
+      margin-bottom: 3vh;
+    }
+
     h3 {
       width: 85%;
-      margin-top: -1vh;
+      margin-top: -2.5vh;
       
       font-family: $font-heading;
       color: $color-dark-purple;

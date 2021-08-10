@@ -1,0 +1,338 @@
+@import '../../../../helper.scss';
+
+div.ProjectModal {
+  // Phones
+  @media (min-width: 300px) {
+    margin-left: -5vw;
+    z-index: 999 !important;
+
+    div.modal-card {
+      position: fixed;
+      z-index: 999 !important;
+      top: 0;
+      
+      height: 100%;
+      width: 100vw;
+      
+      background-color: $color-white;
+    }
+    
+    div.content {
+      width: 90vw;
+      margin-left: 5vw;
+      margin-right: 5vw;
+      
+      div.title {
+        @include flexbox();
+        @include flex-flow(row nowrap);
+        @include justify-content(space-between);
+        @include align-items(center);
+
+        margin-top: 10vh;
+        
+        h1 {
+          font-family: $font-heading;
+          font-size: 1.45em;
+          letter-spacing: .125em;
+          color: $color-dark-purple;
+        }
+
+        button {
+          height: 20px;
+          width: 20px;
+          background: url('../../../../assets/cancel.png');
+          background-size: 20px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      div.subtitle {
+        @include flexbox();
+        @include flex-flow(column nowrap);
+
+        margin-top: -1vh;
+
+        p {
+          margin-bottom: -.5vh;
+          margin-top: 0vh;
+
+          font-size: 1.1em;
+          font-weight: 300;
+          letter-spacing: .1em;
+        }
+
+        a img {
+          height: 16px;
+          width: 16px;
+
+          margin-left: 2.5vw;
+        }
+      }
+
+      div.content-controller {
+        @include flexbox();
+        @include flex-flow(column nowrap);
+
+        margin-top: 1vh;
+
+        height: 70vh;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
+
+        div p {
+          font-size: .9em;
+          letter-spacing: .1em;
+          line-height: 1.75em;
+          font-weight: 300;
+        }
+      }
+
+      div {
+        img {
+          margin-top: 3vh;
+
+          height: 30vh;
+          width: 90vw;
+
+          object-fit: cover;
+          object-position: 50% 0%;
+        }
+
+        h2 {
+          font-size: 1.15em;
+          line-height: 1.6em;
+          font-weight: 300;
+          color: $color-hot-pink;
+
+          margin-bottom: 0vh;
+        }
+      }
+    }
+  }
+  // Tablets
+  @media (min-width: 756px) {
+    div.modal-card {
+      margin-left: 5vw;
+      margin-top: 10vh;
+
+      height: 80vh;
+      width: 80vw;
+
+      z-index: 999;
+    }
+    
+    div.content {
+      width: 70vw;
+
+      div.title {
+        @include flexbox();
+        @include flex-flow(row nowrap);
+        @include justify-content(space-between);
+        @include align-items(flex-start);
+
+        h1 {
+          margin-top: 0vh;
+          font-size: 1.6em;
+        }
+      }
+      
+      div.content-controller {
+        height: 55vh;
+
+        div img {
+          height: 30vh;
+          width: 70vw;
+        }
+      }
+    }
+
+  }
+  // MacBook (13") = 1280px
+  @media (min-width: 1000px) {
+    div.modal-card {
+      height: 85vh;
+      width: 75vw;
+
+      margin-top: 7.5vh;
+      margin-left: 4vw;
+
+      border-radius: 30px;
+    }
+
+    div.content {
+      width: 65vw;
+      div.title {
+        margin-top: 12.5vh;
+        h1 {
+          font-size: 1.75em;
+        }
+      }
+
+      div.subtitle {
+        margin-top: -4vh;
+
+        @include flex-flow(row nowrap);
+        @include justify-content(flex-start);
+        @include align-items(flex-end);
+
+        p {
+          margin-top: -5vh;
+          font-size: 1.2em;
+          letter-spacing: .125em;
+
+          &:not(.underline) {
+            border-bottom: 4px solid white;
+            &::after {
+              content: ' |';
+              margin-right: 1vw;
+            }
+          }
+        }
+
+        a {
+          &:nth-of-type(1)::after {
+            content: ' |';
+            margin-right: 1vw;
+
+            font-size: 1.2em;
+            font-weight: 100;
+          }
+
+          img {
+            height: 24px;
+            width: 24px;
+            margin-left: 1vw;
+          }
+        }
+      }
+
+      div.content-controller {
+        @include flex-flow(row-reverse nowrap);
+
+        height: 65vh;
+        width: 65vw;
+
+        overflow-y: visible !important;
+
+        div {
+          &:nth-of-type(1){ width: 35vw; }
+          &:nth-of-type(2){ width: 30vw; }
+          
+          img {
+            width: 100%;
+          }
+          h2 {
+            font-size: 1.25em;
+          }
+          p {
+            width: 90%;
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+  // MacBook (15")
+  @media (min-width: 1680px) {
+    div.modal-card {
+      height: 80vh;
+      width: 68vw;
+
+      margin-top: 7.5vh;
+      margin-left: 5vw;
+    }
+
+    div.content {
+      width: 60vw;
+      div.title {
+        h1 {
+          font-size: 2.2em;
+        }
+      }
+      
+      div.subtitle {
+        margin-top: -3vh;
+
+        p, a p { 
+          font-size: 1.5em;
+
+          &:not(.underline) {
+            border-bottom: 8px solid white;
+          }
+        }
+        a {
+          &:nth-of-type(1)::after {
+            content: ' |';
+            margin-right: 1vw;
+
+            font-size: 1.5em;
+            font-weight: 100;
+          }
+        }
+      }
+
+      div.content-controller {
+        margin-left: -5vw;
+        div {
+          &:nth-of-type(1){ width: 30vw; }
+          &:nth-of-type(2){ width: 30vw; }
+
+          p {
+            width: 90%;
+            font-size: 1.3em;
+          }
+
+          h2 {
+            font-size: 1.7em;
+          }
+        }
+      }
+    }
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+    div.modal-card {
+      width: 55vw;
+      height: 80vh;
+
+      margin-top: 10vh;
+      margin-left: 3vw;
+
+      div.content {
+        width: 50vw;
+        margin-left: 2.5vw;
+        
+        div.title h1 {
+          font-size: 2.2em;
+        }
+
+        div.content-controller {
+          margin-left: -13vw;
+          
+          div {
+            &:nth-of-type(1) {
+              width: 30vw;
+              margin-left: 2vw;
+
+              h2 { width: 80%; }
+              img {
+                width: 28vw;
+                height: 30vh;
+                object-position: 30% 0%;
+              }
+            }
+            &:nth-of-type(2) {
+              width: 20vw;
+
+              p {
+                width: 100%;
+                font-size: 1.25em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
