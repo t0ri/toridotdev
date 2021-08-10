@@ -4,10 +4,11 @@ div.ProjectModal {
   // Phones
   @media (min-width: 300px) {
     margin-left: -5vw;
-    z-index: 999;
+    z-index: 999 !important;
 
     div.modal-card {
       position: fixed;
+      z-index: 999 !important;
       top: 0;
       
       height: 100%;
@@ -91,11 +92,11 @@ div.ProjectModal {
         img {
           margin-top: 3vh;
 
-          height: 40vh;
+          height: 30vh;
           width: 90vw;
 
           object-fit: cover;
-          object-position: 0% 0%;
+          object-position: 50% 0%;
         }
 
         h2 {
