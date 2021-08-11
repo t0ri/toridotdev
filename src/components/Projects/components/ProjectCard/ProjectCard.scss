@@ -1,6 +1,24 @@
 @import '../../../../helper.scss';
 
-.ProjectCard {
+@keyframes hoverElement {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes unhoverElement {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+div.ProjectCard {
   // Phones
   @media (min-width: 300px) {
     overflow: hidden;
@@ -20,7 +38,14 @@
     border: 3.5px solid $color-white;
     backdrop-filter: blur(42px);
     border-radius: 25px;
-    
+
+    &.project-card-active {
+      animation: hoverElement 1.5s normal forwards;
+    }
+
+    &.project-card-inactive {
+      animation: unhoverElement 2s normal forwards;
+    }
 
     div.img {
       background-color: rgba(255, 0, 255, 0.2);
