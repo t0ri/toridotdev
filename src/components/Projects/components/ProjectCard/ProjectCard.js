@@ -5,10 +5,7 @@ import './ProjectCard.scss'
 export default class ProjectCard extends Component {
   constructor(props) {
     super(props)
-    this.cardElement = React.createRef();
-  
-    this.state = {
-    }
+    this.cardElement = React.createRef()
   }
 
   componentDidMount() { this.setEventListeners() }
