@@ -18,8 +18,9 @@
     rgba(255, 255, 255, 0.40) 0%,
     rgba(255, 255, 255, 0.2) 100%);
     border: 3.5px solid $color-white;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(42px);
     border-radius: 25px;
+    
 
     div.img {
       background-color: rgba(255, 0, 255, 0.2);
