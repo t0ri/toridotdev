@@ -15,7 +15,7 @@ export default class Projects extends Component {
     this.projectsList = [
       {
         title: "Autocomplete",
-        shortDesc: "JS Library utilizing a Trie Data Structure. Jest Tests with Continuous Integration.",
+        shortDesc: "Library utilizing a Trie Data Structure. Tests with Continuous Integration.",
         longDesc: `My JavaScript Autocomplete library was written 
         using a custom Trie (also known as Prefix Tree) data 
         structure to store and process data to enable quick lookup. 
@@ -114,44 +114,36 @@ export default class Projects extends Component {
   }
 
   render() {
-  return (
-    <section className="Projects" id="Projects">
-      <ProjectModal project={this.state.projectModalControl}/>
-      <div className="content">
-        <h3>
-          Below are four projects I’ve highlighted in detail,&nbsp;
-          <a
-            href="https://github.com/t0ri"
-            alt="View Projects on Github"
-            target="_blank"
-            rel="noreferrer"
-          >
-            but you can click here to view all of my projects.
-          </a>
-        </h3>
-        <div className="project-view">
-          {
-            this.projectsList.map((project) => {
-              return (
-                <ProjectCard
-                  title={project.title}
-                  shortDesc={project.shortDesc}
-                  longDesc={project.longDesc}
-                  techDesc={project.techDesc}
-                  date={project.date}
-                  githubLink={project.githubLink}
-                  demoLink={project.demoLink}
-                  src={project.src}
-                  alt={project.alt}
-                  projectModalController={this.projectModalController}
-                  key={project.src}
-                />
-              )
-            })
-          }
+    return (
+      <section className="Projects" id="Projects">
+        <ProjectModal project={this.state.projectModalControl}/>
+        <div className="content">
+          <h3>
+            Below are four projects I’ve highlighted in detail,&nbsp;
+            <a
+              href="https://github.com/t0ri"
+              alt="View Projects on Github"
+              target="_blank"
+              rel="noreferrer"
+            >
+              but you can click here to view all of my projects.
+            </a>
+          </h3>
+          <div className="project-view">
+            {
+              this.projectsList.map((project) => {
+                return (
+                  <ProjectCard
+                    project={project}
+                    projectModalController={this.projectModalController}
+                    key={project.src}
+                  />
+                )
+              })
+            }
+          </div>
         </div>
-      </div>
-    </section>
-  )
-}
+      </section>
+    )
+  }
 }
