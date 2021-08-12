@@ -42,11 +42,11 @@ div.ProjectCard {
     cursor: pointer;
 
     &.project-card-active {
-      animation: hoverElement 1s normal forwards;
+      animation: hoverElement .5s normal forwards;
     }
 
     &.project-card-inactive {
-      animation: unhoverElement 1s normal forwards;
+      animation: unhoverElement .5s normal forwards;
     }
 
     div.img {

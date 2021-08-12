@@ -1,0 +1,172 @@
+@import '../../../../helper.scss';
+
+@keyframes scaleElement {
+  to {
+      transform: scale(8);
+    }
+}
+
+div.AnimatedBackground {
+  // Phones
+  @media (min-width: 300px) {
+  }
+  // Tablets
+  @media (min-width: 756px) {
+  }
+  // MacBook (13") = 1280px
+  @media (min-width: 1000px) {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+
+    background-color: lighten($color-light-pink, 10%);
+
+    height: 70vh;
+    width: 100vw;
+
+    margin-top: -62.5vh;
+    margin-left: -15vw;
+
+    div.background-blur {
+      z-index: 0;
+
+      height: 70vh;
+      width: 100vw;
+      // background-color: rgba(255, 255, 255, .9);
+      background:
+        radial-gradient(120.35% 120.35% at 50% -10.05%,
+        rgba(255, 255, 255, 0.30) 0%,
+        rgba(255, 255, 255, 0) 100%);
+      backdrop-filter: blur(35px);
+    }
+    
+    div.blobs {
+      position: absolute;
+      border-radius: 100%;
+      z-index: -1;
+
+      margin-left: 15vw;
+      
+      animation: scaleElement 2s linear infinite;
+      animation-play-state: paused;
+      animation-delay: calc(var(--scroll) * -1s);
+    }
+    
+    #blob-1 {
+      top: -50px;
+      left: -25px;
+
+      height: 800px;
+      width: 900px;
+      
+      background-color: pink;
+      opacity: .3;
+    }
+    #blob-2 {
+      top: 2px;
+      left: 0px;
+
+      height: 500px;
+      width: 500px;
+      
+      background-color: purple;
+      opacity: .3;
+    }
+    #blob-3 {
+      top: 150px;
+      left: 350px;
+
+      height: 550px;
+      width: 550px;
+      
+      background-color: rebeccapurple;
+      opacity: .35;
+    }
+    #blob-4 {
+      top: -50px;
+      left: 600px;
+
+      height: 250px;
+      width: 250px;
+      
+      background-color: magenta;
+      opacity: .35;
+    }
+    #blob-5 {
+      top: 50px;
+      left: 250px;
+
+      height: 350px;
+      width: 350px;
+      
+      background-color: darkmagenta;
+      opacity: .3;
+    }
+    #blob-6 {
+      top: 150px;
+      left: 25px;
+
+      height: 400px;
+      width: 350px;
+      
+      background-color: navy;
+      opacity: .3;
+    }
+    #blob-7 {
+      top: -50px;
+      left: 100px;
+
+      height: 400px;
+      width: 350px;
+      
+      background-color: lightpink;
+      opacity: .4;
+    }
+    #blob-8 {
+      top: -50px;
+      left: 450px;
+
+      height: 500px;
+      width: 500px;
+      
+      background-color: darkslateblue;
+      opacity: .3;
+    }
+    #blob-9 {
+      top: 400px;
+      left: -50px;
+
+      height: 300px;
+      width: 300px;
+      
+      background-color: darkviolet;
+      opacity: .3;
+    }
+    #blob-10 {
+      top: 300px;
+      left: 200px;
+
+      height: 250px;
+      width: 250px;
+      
+      background-color: deeppink;
+      opacity: .2;
+    }
+  }
+  // MacBook (15")
+  @media (min-width: 1680px) {
+    height: 80vh;
+    width: 100vw;
+
+    margin-top: -70vh;
+    margin-left: -20vw;
+
+    div.background-blur {
+      height: 80vh;
+    }
+
+  }
+  // Large Monitors+
+  @media (min-width: 1900px) {
+  }
+}
