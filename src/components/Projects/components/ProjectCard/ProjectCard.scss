@@ -39,12 +39,14 @@ div.ProjectCard {
     backdrop-filter: blur(42px);
     border-radius: 25px;
 
+    cursor: pointer;
+
     &.project-card-active {
-      animation: hoverElement 1.5s normal forwards;
+      animation: hoverElement 1s normal forwards;
     }
 
     &.project-card-inactive {
-      animation: unhoverElement 2s normal forwards;
+      animation: unhoverElement 1s normal forwards;
     }
 
     div.img {
