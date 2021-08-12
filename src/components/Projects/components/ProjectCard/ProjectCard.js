@@ -31,13 +31,13 @@ export default class ProjectCard extends Component {
       alt,
       title,
       shortDesc,
-      projectModalController,
     } = this.props.project
+    const { projectModalController, project } = this.props
 
     return (
       <div
         className="ProjectCard"
-        onClick={() => projectModalController(this.props)}
+        onClick={() => projectModalController(project)}
         ref={this.cardElement}
       >
         <div className="img">
