@@ -144,7 +144,7 @@ export default class Projects extends Component {
             }
           </div>
         </div>
-        <AnimatedBackground />
+        {/* <AnimatedBackground /> */}
       </section>
     )
   }
