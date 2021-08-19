@@ -1,4 +1,10 @@
-.social-btn img {
-  height: 50px;
-  width: 50px;
+.social-btn {
+  &:hover {
+    transform: scale(105%);
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
 }
