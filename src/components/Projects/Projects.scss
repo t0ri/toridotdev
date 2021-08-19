@@ -3,6 +3,8 @@
 section.Projects {
   padding-bottom: 5vh;
 
+  background-color: lighten($color-light-pink, 30%);
+
   // Phones
   @media (min-width: 300px) {
     margin-top: 2vh;

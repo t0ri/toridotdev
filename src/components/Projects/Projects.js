@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 import ProjectCard from './components/ProjectCard/ProjectCard'
 import ProjectModal from './components/ProjectModal/ProjectModal'
-import AnimatedBackground from './components/AnimatedBackground/AnimatedBackground'
 
 import './Projects.scss'
 
