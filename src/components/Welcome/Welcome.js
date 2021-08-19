@@ -1,4 +1,5 @@
 import SocialButton from '../SocialButton/SocialButton'
+
 import './Welcome.scss'
 
 export default function Welcome() {
@@ -6,17 +7,17 @@ export default function Welcome() {
     {
       url: "https://github.com/t0ri",
       src: "./assets/github.png",
-      alt: "@t0ri Github",
+      alt: "@t0ri on Github",
     },
     {
       url: "https://medium.com/@t0ri",
       src: "./assets/medium.png",
-      alt: "@t0ri Medium",
+      alt: "@t0ri on Medium",
     },
     {
       url: "https://linkedin.com/in/t0ri",
       src: "./assets/linkedin.png",
-      alt: "@t0ri LinkedIn",
+      alt: "@t0ri on LinkedIn",
     },
     {
       url: "mailto:victoriarosemurray@gmail.com",
