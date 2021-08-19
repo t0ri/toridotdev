@@ -1,6 +1,24 @@
 @import '../../../../helper.scss';
 
-.ProjectCard {
+@keyframes hoverElement {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes unhoverElement {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+div.ProjectCard {
   // Phones
   @media (min-width: 300px) {
     overflow: hidden;
@@ -18,8 +36,18 @@
     rgba(255, 255, 255, 0.40) 0%,
     rgba(255, 255, 255, 0.2) 100%);
     border: 3.5px solid $color-white;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(42px);
     border-radius: 25px;
+
+    cursor: pointer;
+
+    &.project-card-active {
+      animation: hoverElement .5s normal forwards;
+    }
+
+    &.project-card-inactive {
+      animation: unhoverElement .5s normal forwards;
+    }
 
     div.img {
       background-color: rgba(255, 0, 255, 0.2);
@@ -36,7 +64,6 @@
     div.text {
       width: 70%;
       max-height: 12.5vh;
-      // background-color: rgba(000, 255, 255, 0.25);
 
       margin: 3vh 1vw 1vh 3vw;
 

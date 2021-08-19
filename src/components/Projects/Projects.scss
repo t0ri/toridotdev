@@ -3,7 +3,6 @@
 section.Projects {
   padding-bottom: 5vh;
 
-  // TODO: background
   background-color: lighten($color-light-pink, 30%);
 
   // Phones
@@ -62,6 +61,8 @@ section.Projects {
   // MacBook (13") = 1280px
   @media (min-width: 1000px) {
     margin-top: -6vh;
+
+    height: 55vh;
     
     .content {
       margin-right: 7.5vw;
@@ -84,6 +85,10 @@ section.Projects {
   }
   // MacBook (15")
   @media (min-width: 1680px) {
+    margin-top: -10vh;
+
+    height: 60vh;
+
     .content {
       h3 {
         font-size: 1.75em;
