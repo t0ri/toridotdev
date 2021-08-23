@@ -1,23 +1,5 @@
 @import '../../../../helper.scss';
 
-@keyframes hoverElement {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes unhoverElement {
-  from {
-    transform: scale(1.05);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
 div.ProjectCard {
   // Phones
   @media (min-width: 300px) {

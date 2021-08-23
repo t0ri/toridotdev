@@ -1,4 +1,5 @@
 import SocialButton from '../SocialButton/SocialButton'
+
 import './Welcome.scss'
 
 export default function Welcome() {
@@ -6,17 +7,17 @@ export default function Welcome() {
     {
       url: "https://github.com/t0ri",
       src: "./assets/github.png",
-      alt: "@t0ri Github",
+      alt: "@t0ri on Github",
     },
     {
       url: "https://medium.com/@t0ri",
       src: "./assets/medium.png",
-      alt: "@t0ri Medium",
+      alt: "@t0ri on Medium",
     },
     {
       url: "https://linkedin.com/in/t0ri",
       src: "./assets/linkedin.png",
-      alt: "@t0ri LinkedIn",
+      alt: "@t0ri on LinkedIn",
     },
     {
       url: "mailto:victoriarosemurray@gmail.com",
@@ -37,8 +38,26 @@ export default function Welcome() {
               Victoria (also known as Tori, she/her/hers) is a new grad developer
               on the hunt for her first full-time frontend position. 
             </h2>
-            <button>
-              Let's Get in Touch!
+            <button class="animated">
+              <span>L</span>
+              <span>e</span>
+              <span>t</span>
+              <span>'</span>
+              <span>s</span>
+              <span>&nbsp;</span>
+              <span>G</span>
+              <span>e</span>
+              <span>t</span>
+              <span>&nbsp;</span>
+              <span>i</span>
+              <span>n</span>
+              <span>&nbsp;</span>
+              <span>T</span>
+              <span>o</span>
+              <span>u</span>
+              <span>c</span>
+              <span>h</span>
+              <span>!</span>
             </button>
             <div className="social-btns">
               {socials.map((social) => {

@@ -1,6 +1,6 @@
 @import '../../../../helper.scss';
 
-.ArticleCard {
+div.ArticleCard {
   // Phones
   @media (min-width: 300px) {
     overflow: hidden;
@@ -11,6 +11,14 @@
     background: $color-white;
     border: 3.5px solid $color-white;
     border-radius: 25px;
+
+    &.article-card-active {
+      animation: hoverElement .5s normal forwards;
+    }
+
+    &.article-card-inactive {
+      animation: unhoverElement .5s normal forwards;
+    }
 
     a {
       @include flexbox();
