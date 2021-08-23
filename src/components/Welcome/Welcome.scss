@@ -59,11 +59,12 @@ section.Welcome {
         padding: 1em 1em 1em 1em;
 
         background: linear-gradient(270deg, #DC33C1 0%, #EE74D7 28.13%, #F189DE 46.19%, #F58FE5 58.33%, #EE74D7 74.07%, #DC33C1 100%);
-        border: 1px solid $color-light-pink;
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
 
+        border: 1px solid $color-light-pink;
         border-radius: 60px;
+
         @include box-shadow(0px 6px 6px rgba(0, 0, 0, 0.5));
 
         font-family: $font-stack;
