@@ -116,7 +116,10 @@ export default class Projects extends Component {
   render() {
     return (
       <section className="Projects" id="Projects">
-        <ProjectModal project={this.state.projectModalControl}/>
+        <ProjectModal
+          project={this.state.projectModalControl}
+          projectModalController={this.projectModalController}
+        />
         <div className="content">
           <h3>
             Below are four projects I’ve highlighted in detail,&nbsp;

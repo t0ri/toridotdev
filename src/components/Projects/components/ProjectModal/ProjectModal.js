@@ -1,6 +1,6 @@
 import './ProjectModal.scss'
 
-function ProjectModal({ project }) {
+function ProjectModal({ project, projectModalController }) {
   if (project === false) {
     return (
       <div></div>
@@ -17,7 +17,7 @@ function ProjectModal({ project }) {
           <div className="title">
             <h1>{project.title}</h1>
             <button
-              onClick={() => project.projectModalController(false)}
+              onClick={() => projectModalController(false)}
               alt='close'
             >
             </button>
