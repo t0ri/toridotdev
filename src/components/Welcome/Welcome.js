@@ -59,7 +59,7 @@ export default function Welcome() {
       const celebrate = `🎊 🎉 🙌 🎉 🎊`
       element.setAttribute('data-before', celebrate)
 
-      // Open Contact in New Tab
+      // Open Contact in New Tab after CSS Animation (.5s)
       const contactURL = 'http://google.com'
       setTimeout(() => { window.open(contactURL, '_blank') }, 500)
 
