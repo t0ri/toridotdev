@@ -25,6 +25,71 @@ export default function Welcome() {
       alt: "Email Tori",
     },
   ]
+
+  const ctaBtnClick = (event, count=0) => {
+    // Get `element` from onClick event object
+    let element = event.target ? event.target : event
+
+    // If `element` is a <span>, set `element` to <button>
+    if (element.tagName === 'SPAN') {
+      element = element.parentElement
+    }
+    
+    // Toggle `.endClickedState` and
+    // `.startClickedState` on a given `element`
+    const toggleClickState = (element) => {
+      element.classList.toggle('endClickedState')
+      element.classList.toggle('startClickedState')
+    }
+
+    if (element.tagName === 'BUTTON' ) {
+      // Set <button class="animated startClickedState">
+      toggleClickState(element)
+      // "Let's Get in Touch!" text is split per letter into spans
+      // Loop through each <span> in `button.animated` and toggle:
+      // `.endClickedState` - off
+      // `.startClickedState` - on
+      Array.from(element.children).forEach((child) => {
+        toggleClickState(child)
+      })
+      
+      // Set <button class="animated" data-before={celebrate} />
+      // Access `data-before` attribute in CSS to set `::before`
+      // pseudoelement content to `celebrate`
+      const celebrate = `🎊 🎉 🙌 🎉 🎊`
+      element.setAttribute('data-before', celebrate)
+
+      // Wait 2.5s timeout, then return button to its original state
+      setTimeout(() => {
+        // Remove `::before` pseudoelement's content
+        element.setAttribute('data-before', '')
+
+        // Set <button class="animated endClickedState">
+        toggleClickState(element)
+
+        // Loop through each <span> in `button.animated` and toggle:
+        // `.endClickedState` - on
+        // `.startClickedState` - off
+        Array.from(element.children).forEach((child) => {
+          toggleClickState(child)
+        })
+      }, 2500)
+    }
+  }
+
+  const setSpans = () => {
+    // Create array in which each index is a character from string
+    const buttonText = 'Let\'s Get in Touch!'.split('')
+    // For each character in `buttonText`, return a <span> containing that {char}
+    // If {char} is ' ', return unicode code for &nbsp; ('\u00a0')
+    // to avoid browser printing '&nbsp;' instead of the ' ' it represents
+    return buttonText.map((char, index) => {
+      return (
+        <span className="endClickedState" key={`${char}-${index}`}>{char === ' ' ? '\u00a0' : char}</span>
+      )
+    })
+  }
+
   return (
     <section className="Welcome" id="Welcome">
       <div className="content">
@@ -36,28 +101,17 @@ export default function Welcome() {
           <div className="left-content">
             <h2>
               Victoria (also known as Tori, she/her/hers) is a new grad developer
-              on the hunt for her first full-time frontend position. 
+              on the hunt for her first full-time frontend position.
             </h2>
-            <button class="animated">
-              <span>L</span>
-              <span>e</span>
-              <span>t</span>
-              <span>'</span>
-              <span>s</span>
-              <span>&nbsp;</span>
-              <span>G</span>
-              <span>e</span>
-              <span>t</span>
-              <span>&nbsp;</span>
-              <span>i</span>
-              <span>n</span>
-              <span>&nbsp;</span>
-              <span>T</span>
-              <span>o</span>
-              <span>u</span>
-              <span>c</span>
-              <span>h</span>
-              <span>!</span>
+            <button
+              className="animated endClickedState"
+              onClick={(event) => ctaBtnClick(event)}
+            >
+              {/* 
+              Render a <span> for each character in
+              "Let's Get in Touch!"
+              */}
+              { setSpans() }
             </button>
             <div className="social-btns">
               {socials.map((social) => {
