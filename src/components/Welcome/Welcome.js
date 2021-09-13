@@ -59,6 +59,10 @@ export default function Welcome() {
       const celebrate = `🎊 🎉 🙌 🎉 🎊`
       element.setAttribute('data-before', celebrate)
 
+      // Open Contact in New Tab
+      const contactURL = 'http://google.com'
+      setTimeout(() => { window.open(contactURL, '_blank') }, 500)
+
       // Wait 2.5s timeout, then return button to its original state
       setTimeout(() => {
         // Remove `::before` pseudoelement's content
