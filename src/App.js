@@ -34,6 +34,7 @@ function App() {
     console.log('%c%s',
     style('16px'), 'https://medium.com/@t0ri/link')
   }
+
   return (
     <div className="App">
       <Navigation />
