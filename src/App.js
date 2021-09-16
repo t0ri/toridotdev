@@ -1,3 +1,5 @@
+import { useInView } from 'react-intersection-observer'
+
 import Navigation from './components/Navigation/Navigation'
 import Welcome from './components/Welcome/Welcome'
 import Projects from './components/Projects/Projects'
@@ -10,7 +12,6 @@ import Footer from './components/Footer/Footer'
 import './App.scss'
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
   const consoleMsg = () => {
     const style = (fontSize) => {
       return `
@@ -35,14 +36,30 @@ function App() {
     style('16px'), 'https://medium.com/@t0ri/link')
   }
 
+  const { 
+    ref: welcomeRef,
+    inView: welcomeInView,
+    entry: welcomeEntry,
+  } = useInView({ threshold: 0.5 })
+  const { 
+    ref: projectsRef,
+    inView: projectsInView,
+    entry: projectsEntry,
+  } = useInView({ threshold: 0.5 })
+  const { 
+    ref: articlesRef,
+    inView: articlesInView,
+    entry: articlesEntry,
+  } = useInView({ threshold: 0.5 })
+
   return (
     <div className="App">
       <Navigation />
 
       <div className="content-container">
-        <Welcome />
-        <Projects />
-        <Articles />
+        <Welcome observerRef={welcomeRef} />
+        <Projects observerRef={projectsRef} />
+        <Articles observerRef={articlesRef} />
         <About />
         <Timeline />
         <Footer />

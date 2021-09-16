@@ -2,7 +2,7 @@ import SocialButton from '../SocialButton/SocialButton'
 
 import './Welcome.scss'
 
-export default function Welcome() {
+export default function Welcome(props) {
   const socials = [
     {
       url: "https://github.com/t0ri",
@@ -95,7 +95,7 @@ export default function Welcome() {
   }
 
   return (
-    <section className="Welcome" id="Welcome">
+    <section ref={props.observerRef} className="Welcome" id="Welcome">
       <div className="content">
         <h1>
           Victoria Murray is a <em>frontend</em> engineer with <em>fullstack</em> experience
