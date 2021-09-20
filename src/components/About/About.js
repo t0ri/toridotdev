@@ -1,8 +1,8 @@
 import './About.scss'
 
-export default function About() {
+export default function About(props) {
   return (
-    <section className="About" id="About">
+    <section ref={props.observerRef} className="About" id="About">
       <div className="content">
         <h3>Hello!</h3>
         <h4>

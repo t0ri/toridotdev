@@ -4,7 +4,7 @@ import './Timeline.scss'
 import TimelineItem from './components/TimelineItem/TimelineItem'
 import TimelineDate from './components/TimelineDate/TimelineDate'
 
-export default function Timeline() {
+export default function Timeline(props) {
   const timelineData = {
     2016: [
       {
@@ -82,7 +82,7 @@ export default function Timeline() {
   }
 
   return (
-    <section className="Timeline" id="Timeline">
+    <section ref={props.observerRef} className="Timeline" id="Timeline">
       <div className="content">
         { renderCards() }
       </div>

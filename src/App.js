@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useInView } from 'react-intersection-observer'
 
 import Navigation from './components/Navigation/Navigation'
@@ -36,32 +37,51 @@ function App() {
     style('16px'), 'https://medium.com/@t0ri/link')
   }
 
-  const { 
+  // Set up Intersection Observers for each <section>
+  const {
     ref: welcomeRef,
     inView: welcomeInView,
     entry: welcomeEntry,
   } = useInView({ threshold: 0.5 })
-  const { 
+  const {
     ref: projectsRef,
     inView: projectsInView,
     entry: projectsEntry,
-  } = useInView({ threshold: 0.5 })
-  const { 
+  } = useInView({ threshold: 0.6 })
+  const {
     ref: articlesRef,
     inView: articlesInView,
     entry: articlesEntry,
-  } = useInView({ threshold: 0.5 })
+  } = useInView({ threshold: 0.6 })
+  const {
+    ref: aboutRef,
+    inView: aboutInView,
+    entry: aboutEntry,
+  } = useInView({ threshold: 0.45 })
+  const {
+    ref: timelineRef,
+    inView: timelineInView,
+    entry: timelineEntry,
+  } = useInView({ threshold: 0.2 })
+
+  const sectionsInView = {
+    welcome: welcomeInView,
+    projects: projectsInView,
+    articles: articlesInView,
+    about: aboutInView,
+    timeline: timelineInView,
+  }
 
   return (
     <div className="App">
-      <Navigation />
+      <Navigation sectionsInView={sectionsInView} />
 
       <div className="content-container">
         <Welcome observerRef={welcomeRef} />
         <Projects observerRef={projectsRef} />
         <Articles observerRef={articlesRef} />
-        <About />
-        <Timeline />
+        <About observerRef={aboutRef} />
+        <Timeline observerRef={timelineRef} />
         <Footer />
       </div>
       {/* { consoleMsg() } */}

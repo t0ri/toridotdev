@@ -1,6 +1,6 @@
 @import '../../helper.scss';
 
-.Navigation {
+div.Navigation {
   // Phones
   @media (min-width: 300px) {
     display: none;
@@ -14,19 +14,31 @@
     padding-top: 9vh;
     margin-left: -2.5vw;
     width: 20vw;
-    mix-blend-mode: difference; // color change on scroll
-    color: $color-white;
-
+    
+    mix-blend-mode: difference;
+    
     ul li a p {
+      color: $color-white;
       letter-spacing: 0.15em;
       font-size: .75em;
       font-family: $font-stack;
       line-height: 1em;
 
-      &:hover {
-        mix-blend-mode: unset;
-        color: $color-hot-pink;
+      span {
+        &:hover {
+          background-color: unset;
+          color: $color-hot-pink;
+        }
+  
+        &#welcome-link.welcome,
+        &#projects-link.projects,
+        &#articles-link.articles,
+        &#about-link.about,
+        &#timeline-link.timeline {
+          color: $color-hot-pink;
+        }
       }
+
     }
   }
   // MacBook (13")
