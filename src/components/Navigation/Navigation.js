@@ -8,10 +8,10 @@ export default function Navigation(props) {
         activeSection = String(section[0])
       }
     })
-    console.log(activeSection)
   }
 
   highlightLink()
+
   return (
     <div className="Navigation">
       <ul>

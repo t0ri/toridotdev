@@ -5,6 +5,7 @@ div.Navigation {
   @media (min-width: 300px) {
     display: none;
   }
+
   // Tablets
   @media (min-width: 756px) {
     position: fixed;
@@ -19,28 +20,25 @@ div.Navigation {
     
     ul li a p {
       color: $color-white;
-      letter-spacing: 0.15em;
-      font-size: .75em;
       font-family: $font-stack;
+      font-size: .75em;
+      letter-spacing: 0.15em;
       line-height: 1em;
 
       span {
-        &:hover {
-          background-color: unset;
-          color: $color-hot-pink;
-        }
-  
+        &:hover,
         &#welcome-link.welcome,
         &#projects-link.projects,
         &#articles-link.articles,
         &#about-link.about,
         &#timeline-link.timeline {
-          color: $color-hot-pink;
+          font-weight: bolder;
         }
       }
 
     }
   }
+
   // MacBook (13")
   @media (min-width: 1200px) {
     padding-top: 10vh;
@@ -49,6 +47,7 @@ div.Navigation {
     font-size: 1em;
     line-height: 1.5em;
   }
+
   // MacBook (15")
   @media (min-width: 1680px) {
     padding-left: 5vw;
@@ -56,6 +55,7 @@ div.Navigation {
     font-size: 1.3em;
     line-height: 1.75em;
   }
+
   // Large Monitors+
   @media (min-width: 1900px) {
     padding-left: 5vw;
