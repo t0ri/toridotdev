@@ -60,8 +60,8 @@ export default function Welcome(props) {
       element.setAttribute('data-before', celebrate)
 
       // Open Contact in New Tab after CSS Animation (.5s)
-      const contactURL = 'http://google.com'
-      setTimeout(() => { window.open(contactURL, '_blank') }, 500)
+      const contactURL = 'mailto:victoriarosemurray@gmail.com?body=%F0%9F%98%8A%20Thank%20you%20for%20emailing%20me!%20%F0%9F%91%8B'
+      setTimeout(() => { window.open(contactURL) }, 500)
 
       // Wait 2.5s timeout, then return button to its original state
       setTimeout(() => {
