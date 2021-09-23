@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import { useInView } from 'react-intersection-observer'
+
 import Navigation from './components/Navigation/Navigation'
 import Welcome from './components/Welcome/Welcome'
 import Projects from './components/Projects/Projects'
@@ -10,7 +13,6 @@ import Footer from './components/Footer/Footer'
 import './App.scss'
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
   const consoleMsg = () => {
     const style = (fontSize) => {
       return `
@@ -34,16 +36,52 @@ function App() {
     console.log('%c%s',
     style('16px'), 'https://medium.com/@t0ri/link')
   }
+
+  // Set up Intersection Observers for each <section>
+  const {
+    ref: welcomeRef,
+    inView: welcomeInView,
+    entry: welcomeEntry,
+  } = useInView({ threshold: 0.5 })
+  const {
+    ref: projectsRef,
+    inView: projectsInView,
+    entry: projectsEntry,
+  } = useInView({ threshold: 0.6 })
+  const {
+    ref: articlesRef,
+    inView: articlesInView,
+    entry: articlesEntry,
+  } = useInView({ threshold: 0.6 })
+  const {
+    ref: aboutRef,
+    inView: aboutInView,
+    entry: aboutEntry,
+  } = useInView({ threshold: 0.45 })
+  const {
+    ref: timelineRef,
+    inView: timelineInView,
+    entry: timelineEntry,
+  } = useInView({ threshold: 0.2 })
+
+  const sectionsInView = {
+    welcome: welcomeInView,
+    projects: projectsInView,
+    articles: articlesInView,
+    about: aboutInView,
+    timeline: timelineInView,
+  }
+
   return (
     <div className="App">
-      <Navigation />
+      <Navigation sectionsInView={sectionsInView} />
 
       <div className="content-container">
-        <Welcome />
-        <Projects />
-        <Articles />
-        <About />
-        <Timeline />
+        <Welcome observerRef={welcomeRef} />
+        <Projects observerRef={projectsRef} />
+        <Articles observerRef={articlesRef} />
+        <About observerRef={aboutRef} />
+        <Timeline observerRef={timelineRef} />
         <Footer />
       </div>
       {/* { consoleMsg() } */}

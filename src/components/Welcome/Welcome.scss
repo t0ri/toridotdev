@@ -1,26 +1,36 @@
 @import '../../helper.scss';
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes wavy {
   0% {
-    transform: translateY(0.15em);
+    transform: translateY(0.1em);
   }
   60% {
-    transform: translateY(-0.15em);
+    transform: translateY(-0.1em);
   }
   100% {
-    transform: translateY(0.15em);
+    transform: translateY(0.1em);
+  }
+}
+
+@keyframes grow {
+  0% {
+    font-size: inherit;
+    transform: translateX(1.7em);
+  }
+  100% {
+    font-size: calc(inhert - .005em);
   }
 }
 
@@ -71,6 +81,25 @@ section.Welcome {
         font-size: 1em;
         letter-spacing: 0.15em;
 
+        &.startClickedState::before {
+          animation: grow .1s ease-in-out 1;
+        }
+
+        &.endClickedState::before {
+          transition: opacity 0.15s;
+          opacity: 0;
+        }
+
+        &::before {
+          content: attr(data-before);
+          position: absolute;
+          z-index: 999;
+
+          font-size: 1.5em;
+          margin-top: -.25em;
+          margin-left: .2em;
+        }
+
         &:hover {
           cursor: pointer;
           transform: scale(102%);
@@ -86,6 +115,16 @@ section.Welcome {
 
         span {
           display: inline-block;
+          
+          &.startClickedState {
+            transition: opacity 0.15s;
+            opacity: 0;
+          }
+
+          &.endClickedState {
+            transition: opacity 0.2s;
+            opacity: 1;
+          }
         }
       }
 

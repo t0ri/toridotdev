@@ -2,7 +2,7 @@ import ArticleCard from './components/ArticleCard/ArticleCard'
 
 import './Articles.scss'
 
-export default function Articles() {
+export default function Articles(props) {
   const articlesList = [
     {
       title: 'Statefulness in a Stateless Web',
@@ -25,7 +25,7 @@ export default function Articles() {
   ]
 
   return (
-    <section className="Articles" id="Articles">
+    <section ref={props.observerRef} className="Articles" id="Articles">
       <div className="content">
         <h3>
         These are my favorite technical articles I’ve authored, &nbsp;

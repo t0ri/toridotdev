@@ -115,7 +115,7 @@ export default class Projects extends Component {
 
   render() {
     return (
-      <section className="Projects" id="Projects">
+      <section ref={this.props.observerRef} className="Projects" id="Projects">
         <ProjectModal
           project={this.state.projectModalControl}
           projectModalController={this.projectModalController}
