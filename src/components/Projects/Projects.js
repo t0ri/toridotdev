@@ -124,12 +124,21 @@ export default class Projects extends Component {
         }
       })
     } else {
-      // If `projectModalController()` was called without `project`
-      // set `this.state.projectModalControl` to `false` to make
-      // <ProjectModal /> rerender as an empty <div></div>
-      this.setState({ projectModalControl: Boolean(false) })
-      // Allow browser window to scroll again
-      document.body.style.overflow = 'unset'
+      // Find modal element and replace the animation class
+      let modal = document.getElementsByClassName('animate-open')[0]
+      if (modal) {
+        modal.classList.remove('animate-open')
+        modal.classList.add('animate-close')
+      }
+      // Wait for animation before unmounting <ProjectModal />
+      setTimeout(() => {
+        // If `projectModalController()` was called without `project`
+        // set `this.state.projectModalControl` to `false` to make
+        // <ProjectModal /> rerender as an empty <div></div>
+        this.setState({ projectModalControl: Boolean(false) })
+        // Allow browser window to scroll again
+        document.body.style.overflow = 'unset'
+      }, 500);
     }
   }
 

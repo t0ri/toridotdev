@@ -1,6 +1,6 @@
 import './ProjectModal.scss'
 
-function ProjectModal({ project, projectModalController, modalAnimateState }) {
+function ProjectModal({ project, projectModalController }) {
   if (project === false) {
     return (
       <div></div>
@@ -9,7 +9,7 @@ function ProjectModal({ project, projectModalController, modalAnimateState }) {
 
   return (
     <div className="ProjectModal">
-      <div className={`modal-card ${modalAnimateState}`}>
+      <div className="modal-card animate-open">
 
         <div className="content">
 
