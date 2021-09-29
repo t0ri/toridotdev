@@ -1,17 +1,25 @@
+// React Imports
 import React, { Component } from 'react'
 
+// Component Imports
 import ProjectCard from './components/ProjectCard/ProjectCard'
 import ProjectModal from './components/ProjectModal/ProjectModal'
 
+// Styling Imports
 import './Projects.scss'
+
 
 export default class Projects extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      // `this.state.projectModalControl` initiates as `false`
+      // to keep <ProjectModal /> from rendering the modal
       projectModalControl: false,
     }
 
+    // NOTE: Project Data List Storage
+    // Remove when backend is configured
     this.projectsList = [
       {
         title: "Autocomplete",
@@ -95,20 +103,32 @@ export default class Projects extends Component {
       },
     ]
 
+    // Binding `this`
     this.projectModalController = this.projectModalController.bind(this)
   }
 
   projectModalController(project) {
+    // If `project` is passed into `projectModalController()`
     if (project) {
+      // Set `this.state.projectModalControl` to that `project`,
+      // triggering <ProjectModal /> to render `project`
       this.setState({ projectModalControl: project })
+      // Keep window from scrolling while modal is open
       document.body.style.overflow = 'hidden'
+      // Listen for for key presses to close modal
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' || e.key === 'q') {
+          // If user tries to exit modal by pressing "esc" or "q",
+          // call this method without passing `project` to close modal
           this.projectModalController()
         }
       })
     } else {
+      // If `projectModalController()` was called without `project`
+      // set `this.state.projectModalControl` to `false` to make
+      // <ProjectModal /> rerender as an empty <div></div>
       this.setState({ projectModalControl: Boolean(false) })
+      // Allow browser window to scroll again
       document.body.style.overflow = 'unset'
     }
   }
@@ -116,11 +136,20 @@ export default class Projects extends Component {
   render() {
     return (
       <section ref={this.props.observerRef} className="Projects" id="Projects">
+
+        {/*
+        <ProjectModal /> will render an empty <div> if
+        `this.state.projectModalControl` is `false`, or renders the modal
+        if a project is passed into state via clicking on a <ProjectCard />
+        */}
         <ProjectModal
           project={this.state.projectModalControl}
           projectModalController={this.projectModalController}
+          modalAnimateState={this.projectModalState}
         />
+
         <div className="content">
+
           <h3>
             Below are four projects I’ve highlighted in detail,&nbsp;
             <a
@@ -132,6 +161,11 @@ export default class Projects extends Component {
               but you can click here to view all of my projects.
             </a>
           </h3>
+
+          {/* 
+          Projects are mapped into many <ProjectCard />s used to
+          control opening a <ProjectModal /> to view that project 
+          */}
           <div className="project-view">
             {
               this.projectsList.map((project) => {
@@ -145,6 +179,7 @@ export default class Projects extends Component {
               })
             }
           </div>
+
         </div>
         {/* <AnimatedBackground /> */}
       </section>
