@@ -105,6 +105,22 @@ export default class Projects extends Component {
 
     // Binding `this`
     this.projectModalController = this.projectModalController.bind(this)
+    this.detectClickLocation = this.detectClickLocation.bind(this)
+  }
+
+  detectClickLocation(target) {
+    // Locate <ProjectModal />'s container node
+    let modal = document.getElementsByClassName('modal-card')[0]
+    // If user clicked on a <ProjectCard />, do nothing
+    if (target.classList.contains('ProjectCard')) { return }
+    // If user clicked inside the <ProjectModal />, do nothing
+    else if (target === modal) { return }
+    // If user clicked outside the <ProjectModal />, close modal
+    else if (target === document.body) { this.projectModalController() }
+
+    // If `target` didn't match any of the elements above,
+    // Pass the `target` node's parent into this method
+    else { this.detectClickLocation(target.parentNode) }
   }
 
   projectModalController(project) {
@@ -123,6 +139,11 @@ export default class Projects extends Component {
           this.projectModalController()
         }
       })
+      setTimeout(() => {
+        document.body.addEventListener('click', (e) => {
+          this.detectClickLocation(e.target)
+        })
+      }, 500)
     } else {
       // Find modal element and replace the animation class
       let modal = document.getElementsByClassName('animate-open')[0]
