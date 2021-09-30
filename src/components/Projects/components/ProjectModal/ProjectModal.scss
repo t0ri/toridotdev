@@ -47,7 +47,7 @@ div.ProjectModal {
     div.modal-card {
       position: fixed;
       z-index: 999 !important;
-      
+
       height: 100%;
       width: 100vw;
       
@@ -174,11 +174,11 @@ div.ProjectModal {
       z-index: 999;
 
       &.animate-open {
-        animation: .15s ease-in 0s 1 forwards running fadein !important;
+        animation: .15s ease-in 0s 1 forwards running fadein;
       }
 
       &.animate-close {
-        animation: .15s ease-in 0s 1 forwards running fadeout !important;
+        animation: .15s ease-in 0s 1 forwards running fadeout;
       }
     }
     
