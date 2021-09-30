@@ -138,7 +138,7 @@ export default class Projects extends Component {
         this.setState({ projectModalControl: Boolean(false) })
         // Allow browser window to scroll again
         document.body.style.overflow = 'unset'
-      }, 500);
+      }, 500)
     }
   }
 
@@ -154,7 +154,6 @@ export default class Projects extends Component {
         <ProjectModal
           project={this.state.projectModalControl}
           projectModalController={this.projectModalController}
-          modalAnimateState={this.projectModalState}
         />
 
         <div className="content">
