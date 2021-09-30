@@ -1,5 +1,43 @@
 @import '../../../../helper.scss';
 
+@keyframes slideup {
+  0% {
+    top: 100vh;
+    transition: translateY(100vh);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    top: 0;
+    transition: translateY(-100vh);
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 div.ProjectModal {
   // Phones
   @media (min-width: 300px) {
@@ -10,11 +48,20 @@ div.ProjectModal {
       position: fixed;
       z-index: 999 !important;
       top: 0;
-      
+
       height: 100%;
       width: 100vw;
       
       background-color: $color-white;
+      @include box-shadow(0px -10px 15px 0px rgba(0, 0, 0, .25));
+
+      &.animate-open {
+        animation: .5s ease-out 0s 1 forwards running slideup;
+      }
+
+      &.animate-close {
+        animation: .15s ease-in 0s 1 forwards running slidedown;
+      }
     }
     
     div.content {
@@ -79,12 +126,18 @@ div.ProjectModal {
         height: 70vh;
         overflow-y: scroll !important;
         overflow-x: hidden;
+        padding-right: 1vw;
 
-        div p {
-          font-size: .9em;
-          letter-spacing: .1em;
-          line-height: 1.75em;
-          font-weight: 300;
+        div {
+          p {
+            font-size: .9em;
+            letter-spacing: .1em;
+            line-height: 1.75em;
+            font-weight: 300;
+          }
+          img {
+            @include box-shadow(0px 3px 15px 0px rgba(0, 0, 0, .25));
+          }
         }
       }
 
@@ -120,6 +173,14 @@ div.ProjectModal {
       width: 80vw;
 
       z-index: 999;
+
+      &.animate-open {
+        animation: .15s ease-in 0s 1 forwards running fadein;
+      }
+
+      &.animate-close {
+        animation: .15s ease-in 0s 1 forwards running fadeout;
+      }
     }
     
     div.content {

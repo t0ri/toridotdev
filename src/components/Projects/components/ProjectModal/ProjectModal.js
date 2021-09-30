@@ -9,7 +9,7 @@ function ProjectModal({ project, projectModalController }) {
 
   return (
     <div className="ProjectModal">
-      <div className="modal-card">
+      <div className="modal-card animate-open">
 
         <div className="content">
 
