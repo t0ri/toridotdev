@@ -17,7 +17,7 @@ section.Timeline {
       position: absolute;
       z-index: 0;
 
-      margin-top: 4%;
+      margin-top: 3.5%;
       width: 2px;
       background-color: $color-medium-purple;
       height: 67%;
@@ -47,6 +47,7 @@ section.Timeline {
   // Large Monitors
   @media (min-width: 1900px) {
     &::before {
+      height: 66%;
       left: 50.5vw;
     }
   }

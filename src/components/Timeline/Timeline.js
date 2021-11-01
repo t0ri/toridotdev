@@ -28,8 +28,8 @@ export default function Timeline(props) {
         subtitle: 'Project-based learning degree program in Downtown San Francisco.',
       },
       {
-        title: 'Founded first womxn’s group at college.',
-        subtitle: 'Lxdy Circle met weekly to support womxn for two years.',
+        title: 'Founded first women’s support group at college.',
+        subtitle: 'Lady Circle met weekly to support women for two years.',
       },
     ],
     2020: [
