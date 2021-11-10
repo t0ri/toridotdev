@@ -65,7 +65,7 @@ export default function Timeline(props) {
     )
   }
 
-  const renderCards = () => {
+  const renderTimelineCards = () => {
     let cards = []
     let cardMarginController = true
     for (const year in timelineData) {
@@ -74,7 +74,7 @@ export default function Timeline(props) {
       items.forEach((item) => {
         cards.push(
           createTimelineItemComponent(item.title, item.subtitle, cardMarginController)
-          )
+        )
       })
       cardMarginController = !cardMarginController
     }
@@ -84,7 +84,7 @@ export default function Timeline(props) {
   return (
     <section ref={props.observerRef} className="Timeline" id="Timeline">
       <div className="content">
-        { renderCards() }
+        { renderTimelineCards() }
       </div>
     </section>
   )

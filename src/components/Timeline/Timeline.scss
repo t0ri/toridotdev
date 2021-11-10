@@ -37,12 +37,10 @@ section.Timeline {
   }
   // MacBook (15") = 1680px x 1050px
   @media (min-width: 1680px) {
-    
     &::before {
       margin-top: 2%; 
       left: 53vw;
     }
-
   }
   // Large Monitors
   @media (min-width: 1900px) {
@@ -51,11 +49,10 @@ section.Timeline {
       left: 50.5vw;
     }
   }
-
   @media (min-width: 3000px) {
     &::before {
       margin-top: 1.5%;
-      height: 66%;
+      height: 67%;
       left: 50.5vw;
     }
   }
