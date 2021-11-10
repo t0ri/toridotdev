@@ -78,7 +78,30 @@ export default function Timeline(props) {
       })
       cardMarginController = !cardMarginController
     }
+
+    setTimeout(() => {
+      calculateTimelineHeight()
+      window.addEventListener('resize', calculateTimelineHeight)
+    },  100)
+
     return cards
+  }
+
+  const calculateTimelineHeight = () => {
+    const timelineElements = document.getElementsByClassName('dot')
+    const topTimelineElement = timelineElements[0].getBoundingClientRect()
+    const bottomTimelineElement = timelineElements[(timelineElements.length - 1)].getBoundingClientRect()
+
+    const topTimelineElementY = topTimelineElement.top + topTimelineElement.height / 2
+    const bottomTimelineElementY = bottomTimelineElement.top + bottomTimelineElement.height / 2
+
+    const timelineHeight = bottomTimelineElementY - topTimelineElementY
+
+    setTimelineHeight(timelineHeight)
+  }
+
+  const setTimelineHeight = (newTimelineHeight) => {
+    document.documentElement.style.setProperty('--timeline-height', newTimelineHeight + "px")
   }
 
   return (
