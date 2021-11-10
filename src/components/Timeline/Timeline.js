@@ -111,5 +111,4 @@ export default function Timeline(props) {
       </div>
     </section>
   )
-  
 }
