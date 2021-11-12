@@ -68,6 +68,7 @@ export default function Timeline(props) {
   const renderTimelineCards = () => {
     let cards = []
     let cardMarginController = true
+
     for (const year in timelineData) {
       cards.push(createTimelineDateComponent(year, cardMarginController))
       const items = timelineData[year]

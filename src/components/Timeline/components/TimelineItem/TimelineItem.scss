@@ -48,6 +48,20 @@ div.TimelineItem {
     &.right {
       margin-left: 39vw;
     }
+
+    &.fade-in-section {
+      opacity: 0;
+      transform: translateY(2.5vh);
+      visibility: hidden;
+      transition: opacity 0.25s ease-out, transform .75s ease-out;
+      will-change: opacity, visibility;
+
+      &.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+      }
+    }
   }
   // MacBook (15") = 1680px x 1050px
   @media (min-width: 1680px) {
