@@ -17,10 +17,10 @@ section.Timeline {
       position: absolute;
       z-index: 0;
 
-      margin-top: 4%;
+      margin-top: 2%;
       width: 2px;
       background-color: $color-medium-purple;
-      height: 67%;
+      height: var(--timeline-height);
       left: 20vw;
     }
 
@@ -37,24 +37,13 @@ section.Timeline {
   }
   // MacBook (15") = 1680px x 1050px
   @media (min-width: 1680px) {
-    
     &::before {
-      margin-top: 2%; 
       left: 53vw;
     }
-
   }
   // Large Monitors
   @media (min-width: 1900px) {
     &::before {
-      left: 50.5vw;
-    }
-  }
-
-  @media (min-width: 3000px) {
-    &::before {
-      margin-top: 1.5%;
-      height: 66%;
       left: 50.5vw;
     }
   }

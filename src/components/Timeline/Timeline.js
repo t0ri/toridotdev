@@ -28,8 +28,8 @@ export default function Timeline(props) {
         subtitle: 'Project-based learning degree program in Downtown San Francisco.',
       },
       {
-        title: 'Founded first womxn’s group at college.',
-        subtitle: 'Lxdy Circle met weekly to support womxn for two years.',
+        title: 'Founded first women’s support group at college.',
+        subtitle: 'Lady Circle met weekly to support women for two years.',
       },
     ],
     2020: [
@@ -65,26 +65,50 @@ export default function Timeline(props) {
     )
   }
 
-  const renderCards = () => {
+  const renderTimelineCards = () => {
     let cards = []
     let cardMarginController = true
+
     for (const year in timelineData) {
       cards.push(createTimelineDateComponent(year, cardMarginController))
       const items = timelineData[year]
       items.forEach((item) => {
         cards.push(
           createTimelineItemComponent(item.title, item.subtitle, cardMarginController)
-          )
+        )
       })
       cardMarginController = !cardMarginController
     }
+
+    setTimeout(() => {
+      calculateTimelineHeight()
+      window.addEventListener('resize', calculateTimelineHeight)
+    },  100)
+
     return cards
+  }
+
+  const calculateTimelineHeight = () => {
+    const timelineElements = document.getElementsByClassName('dot')
+    const topTimelineElement = timelineElements[0].getBoundingClientRect()
+    const bottomTimelineElement = timelineElements[(timelineElements.length - 1)].getBoundingClientRect()
+
+    const topTimelineElementY = topTimelineElement.top + topTimelineElement.height / 2
+    const bottomTimelineElementY = bottomTimelineElement.top + bottomTimelineElement.height / 2
+
+    const timelineHeight = bottomTimelineElementY - topTimelineElementY
+
+    setTimelineHeight(timelineHeight)
+  }
+
+  const setTimelineHeight = (newTimelineHeight) => {
+    document.documentElement.style.setProperty('--timeline-height', newTimelineHeight + "px")
   }
 
   return (
     <section ref={props.observerRef} className="Timeline" id="Timeline">
       <div className="content">
-        { renderCards() }
+        { renderTimelineCards() }
       </div>
     </section>
   )
